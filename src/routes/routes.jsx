@@ -1,4 +1,5 @@
 import Navbar from '@/component/Navbar';
+import BreastCancerContact from '@/pages/BreastCancer/BreastCancerContact';
 import CancerCare from '@/pages/CancerCare/CancerCare';
 import DigestiveHealth from '@/pages/DigestiveHealth/DigestiveHealth';
 import EyeHealth from '@/pages/EyeHealth/EyeHealth';
@@ -47,6 +48,7 @@ const AllRoutes = () => {
         <Route path="/featured/vegan-meal-delivery" element={<BestVegan />} />
         <Route path="/featured/multivitamins-women" element={<MultiVwomens />} />
         <Route path="/featured/multivitamins-men" element={<MultiVmens />} />
+        <Route path="/contact/breast-cancer" element={<BreastCancerContact />} />
 
 
 

@@ -41,12 +41,12 @@ const Navbar = () => {
       { name: 'Best Multivitamins for Men', desc: 'Male nutrition guide', link: '/featured/multivitamins-men' }
     ],
     connect: [
-      { name: 'Newsletter', desc: 'Health updates', link: '/connect/newsletter' },
-      { name: 'Community Forum', desc: 'Join discussions', link: '/connect/forum' },
-      { name: 'Expert Consultations', desc: 'Professional advice', link: '/connect/consultations' },
-      { name: 'Health Webinars', desc: 'Live sessions', link: '/connect/webinars' },
-      { name: 'Support Groups', desc: 'Peer connections', link: '/connect/support-groups' },
-      { name: 'Health Tracker', desc: 'Monitor progress', link: '/connect/health-tracker' }
+      { name: 'Breast Cancer', desc: 'Health updates', link: '/contact/breast-cancer' },
+      { name: 'Multiple Sclerosis', desc: 'Join discussions', link: '/connect/forum' },
+      { name: 'Depression', desc: 'Professional advice', link: '/connect/consultations' },
+      { name: 'Migraine', desc: 'Live sessions', link: '/connect/webinars' },
+      { name: 'Type 2 Diabetes', desc: 'Peer connections', link: '/connect/support-groups' },
+      { name: 'Psoriasis', desc: 'Monitor progress', link: '/connect/health-tracker' }
     ]
   };
 
