@@ -53,7 +53,7 @@ export default function LongevityArticleGuide() {
               {/* Main Image */}
               <div className="mb-8">
                 <img
-                  src="/placeholder.svg?height=400&width=800"
+                  src="/longevity.avif"
                   alt="Elderly person exercising outdoors in a peaceful setting"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />

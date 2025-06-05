@@ -1,9 +1,10 @@
 import React from 'react'
+import MensMultivitaminGuide from './MultiVmensHero'
 
 const MultiVmens = () => {
   return (
     <div>
-            hello
+            <MensMultivitaminGuide/>
 
     </div>
   )

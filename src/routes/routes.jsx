@@ -1,4 +1,8 @@
 import Navbar from '@/component/Navbar';
+import BreakfastQuiz from '@/pages/blog/Blog1';
+import SleepHeartHealthArticle from '@/pages/blog/Blog2';
+import CarnieWilsonDepressionArticle from '@/pages/blog/Blog3';
+import HealthierMiniDesserts from '@/pages/blog/Blog4';
 import BreastCancerContact from '@/pages/BreastCancer/BreastCancerContact';
 import CancerCare from '@/pages/CancerCare/CancerCare';
 import DigestiveHealth from '@/pages/DigestiveHealth/DigestiveHealth';
@@ -49,6 +53,14 @@ const AllRoutes = () => {
         <Route path="/featured/multivitamins-women" element={<MultiVwomens />} />
         <Route path="/featured/multivitamins-men" element={<MultiVmens />} />
         <Route path="/contact/breast-cancer" element={<BreastCancerContact />} />
+
+      <Route path="/blog/break-fast-quiz" element={<BreakfastQuiz />} />
+
+      <Route path="/blog/sleep-heart-health-article" element={<SleepHeartHealthArticle />} />
+
+      <Route path="/blog/carnie-wilson-depression-article" element={<CarnieWilsonDepressionArticle />} />
+
+      <Route path="/blog/healthier-mini-desserts" element={<HealthierMiniDesserts />} />
 
 
 

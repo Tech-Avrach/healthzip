@@ -1,9 +1,10 @@
 import React from 'react'
+import VeganMealDeliveryGuide from './BestVeganhero'
 
 const BestVegan = () => {
   return (
     <div>
-            hello
+            <VeganMealDeliveryGuide/>
 
     </div>
   )

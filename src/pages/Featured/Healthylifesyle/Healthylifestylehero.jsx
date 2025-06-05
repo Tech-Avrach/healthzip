@@ -53,7 +53,7 @@ export default function HealthArticleGuide() {
               {/* Main Image */}
               <div className="mb-8">
                 <img
-                  src="/placeholder.svg?height=400&width=800"
+                  src="/W.jpg"
                   alt="Woman doing yoga exercise in a bright room"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />

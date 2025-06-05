@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const TrendingBlogs = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const blogsPerPage = 4;
@@ -13,7 +14,8 @@ const TrendingBlogs = () => {
             title: "Quiz: What should I Eat For a Healthy Breakfast.",
             excerpt: "We promise there's a nutritious option that fits your lifestyle.",
             image: "/overhead-view-breakfast-plates-eggs-waffles-fruit-coffee-732x549-thumbnail.jpg",
-            bgColor: "bg-purple-100"
+            bgColor: "bg-purple-100",
+            Link: "/blog/break-fast-quiz"
         },
         {
             id: 2,
@@ -22,7 +24,8 @@ const TrendingBlogs = () => {
             title: "Getting Too Much and Too Little Sleep Can Hurt Your Heart.",
             excerpt: "Did you know that sleep can offset your risk of your heart attack?.",
             image: "/Female_Sleeping_732x549-thumbnail.jpg",
-            bgColor: "bg-orange-100"
+            bgColor: "bg-orange-100",
+            Link: "/blog/sleep-heart-health-article"
         },
         {
             id: 3,
@@ -31,7 +34,8 @@ const TrendingBlogs = () => {
             title: "Willson phillips'carnie wilson on living with depression",
             excerpt: "The point is that It Ebbs and Flows , and that's ok",
             image: "/carnie-wilson-732x549-thumbnail.jpg",
-            bgColor: "bg-green-100"
+            bgColor: "bg-green-100",
+            Link: "/blog/carnie-wilson-depression-article"
         },
         {
             id: 4,
@@ -40,7 +44,8 @@ const TrendingBlogs = () => {
             title: "6 Healthier mini deserts",
             excerpt: "These little treat crumbles, cookies, truffles and even a latte.",
             image: "/4334234-6-Healthier-Mini-Desserts-thumbnail-732x549-1.jpg",
-            bgColor: "bg-yellow-100"
+            bgColor: "bg-yellow-100",
+            Link: "/blog/healthier-mini-desserts"
         },
         {
             id: 5,
@@ -154,6 +159,7 @@ const TrendingBlogs = () => {
                   whileHover={{ y: -5 }}
                   className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
                 >
+                  <Link to={blog.Link || "#"} className="block">
                   <div className="flex flex-col md:flex-row">
                     {/* Image */}
                     <div className={`${blog.bgColor} p-6 md:w-80 flex-shrink-0`}>
@@ -207,6 +213,7 @@ const TrendingBlogs = () => {
                       </motion.button>
                     </div>
                   </div>
+                  </Link>
                 </motion.article>
               ))}
     

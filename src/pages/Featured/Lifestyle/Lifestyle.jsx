@@ -1,9 +1,10 @@
 import React from 'react'
+import LifestyleArticleGuide from './Lifestylehero'
 
 const Lifestyle = () => {
   return (
     <div>
-            helo
+            <LifestyleArticleGuide/>
 
     </div>
   )
