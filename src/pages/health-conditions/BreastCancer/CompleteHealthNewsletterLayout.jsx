@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, User, Heart, ChevronRight, X, Star, Clock, Users, Shield, CheckCircle, Facebook, Twitter, Instagram, Youtube, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function CompleteHealthNewsletterLayout() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "There are several breast cancer treatments options. Often, people receive a combination of...",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop",
       readTime: "5 min read",
-      category: "Treatment Guide"
+      category: "Treatment Guide",
+      link: "/health-conditions/breast-cancer/treatments/breast-cancer-treatments-guide"
     },
     {
       id: 2,
@@ -49,7 +51,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "This list of questions and tips can help you feel more prepared the next time you speak...",
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop",
       readTime: "8 min read",
-      category: "Patient Advice"
+      category: "Patient Advice",
+      link: "/health-conditions/breast-cancer/treatments/oncologist-questions-guide"
     },
     {
       id: 3,
@@ -57,7 +60,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Chemotherapy can be a tough journey with ups and downs. Read our tips on what to expect...",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop",
       readTime: "6 min read",
-      category: "Personal Story"
+      category: "Personal Story",
+      link: "/health-conditions/breast-cancer/treatments/chemo-guide"
     },
     {
       id: 4,
@@ -65,7 +69,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Your doctor may suggest adjuvant therapy as part of your breast cancer treatment. Learn...",
       image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=300&h=200&fit=crop",
       readTime: "4 min read",
-      category: "Medical Info"
+      category: "Medical Info",
+      link: "/health-conditions/breast-cancer/treatments/adjuvant-therapy-guide"
     },
     {
       id: 5,
@@ -73,7 +78,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Treatment needs for advanced breast cancer vary. Learn more about available therapies...",
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=300&h=200&fit=crop",
       readTime: "7 min read",
-      category: "Treatment Options"
+      category: "Treatment Options",
+      link: "/health-conditions/breast-cancer/treatments/breast-cancer-therapy-guide"
     },
     {
       id: 6,
@@ -81,7 +87,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "If you need surgery due to breast cancer, you may be considering reconstruction. We'll...",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=300&h=200&fit=crop",
       readTime: "5 min read",
-      category: "Surgery Guide"
+      category: "Surgery Guide",
+      link: "/health-conditions/breast-cancer/treatments/breast-reconstruction-guide"
     }
   ];
 
@@ -92,7 +99,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Regular breast cancer screenings can detect breast cancer years before symptoms develop...",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop",
       readTime: "6 min read",
-      category: "Screening"
+      category: "Screening",
+      link: "/health-conditions/breast-cancer/early-detection/breast-reconstruction-guide"
     },
     {
       id: 8,
@@ -100,7 +108,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Explore information about breast cancer tests like mammography, breast ultrasound, and...",
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop",
       readTime: "8 min read",
-      category: "Testing"
+      category: "Testing",
+      link: "/health-conditions/breast-cancer/early-detection/breast-cancer-guide"
     },
     {
       id: 9,
@@ -108,7 +117,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "A breast self-exam is a screening technique you can do at home to check for breast lumps...",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop",
       readTime: "4 min read",
-      category: "Self-Care"
+      category: "Self-Care",
+      link: "/health-conditions/breast-cancer/early-detection/breast-self-exam-guide"
     },
     {
       id: 10,
@@ -116,7 +126,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Most women have one or more risk factors for breast cancer. Knowing your risk factors can...",
       image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=300&h=200&fit=crop",
       readTime: "7 min read",
-      category: "Risk Assessment"
+      category: "Risk Assessment",
+      link: "/health-conditions/breast-cancer/early-detection/breast-cancer-risk-factors"
     }
   ];
 
@@ -478,9 +489,11 @@ export default function CompleteHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
-                <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <Link to={selectedArticle.link}>
+              <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
-                </button>
+                </button></Link>
+                
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export default function SleepHeartHealthArticle() {
   const tabs = ["Overview", "Research", "Sleep Stages", "Tips", "FAQ"]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-20 md:pt-32">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content - now takes up remaining space */}
@@ -425,7 +425,7 @@ export default function SleepHeartHealthArticle() {
           {/* Sidebar - now fixed to the right */}
           <div className="lg:w-1/3 lg:pl-8">
             {/* Author Info */}
-            <div className="bg-gray-50 rounded-lg p-6 mb-8 sticky top-4">
+            <div className="bg-gray-50 rounded-lg p-6 mb-8 ">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
                   <User className="w-8 h-8 text-gray-600" />
@@ -457,7 +457,7 @@ export default function SleepHeartHealthArticle() {
             </div>
 
             {/* Key Statistics */}
-            <div className="bg-blue-50 rounded-lg p-6 mb-8 sticky top-[22rem]">
+            <div className="bg-blue-50 rounded-lg p-6 mb-8 ">
               <h3 className="text-lg font-bold text-blue-800 mb-4">Sleep & Heart Health By The Numbers</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -496,7 +496,7 @@ export default function SleepHeartHealthArticle() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="bg-teal-50 rounded-lg p-6 mb-8 sticky top-[36rem]">
+            <div className="bg-teal-50 rounded-lg p-6 mb-8">
               <div className="mb-4">
                 <h3 className="text-sm font-bold text-teal-800 uppercase tracking-wide mb-2">HEALTHLINE NEWSLETTER</h3>
                 <h4 className="text-xl font-bold text-gray-900 mb-2">Sleep & Wellness Updates</h4>
@@ -532,7 +532,7 @@ export default function SleepHeartHealthArticle() {
             </div>
 
             {/* Related Articles */}
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-[52rem]">
+            <div className="bg-gray-50 rounded-lg p-6 sticky">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Related Articles</h3>
               <ul className="space-y-4">
                 <li>

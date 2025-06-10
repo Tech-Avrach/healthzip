@@ -54,7 +54,8 @@ const TrendingBlogs = () => {
             title: "8 healthy cold snack for summer",
             excerpt: "Beat the summer heat with these 8 refreshing and healthy cold snacks that are perfect for staying cool and energized all day!",
             image: "/typical-brazilian-freezies-still-life.jpg",
-            bgColor: "bg-blue-100"
+            bgColor: "bg-blue-100",
+            Link: "/blog/summer-cold-snacks-guide"
         },
         {
             id: 6,
@@ -63,7 +64,8 @@ const TrendingBlogs = () => {
             title: "Why do i feel pain in my lower abdomen?",
             excerpt: "Lower abdominal pain can be caused by digestive issues, infections, or reproductive conditions, and should be evaluated if persistent or severe.",
             image: "/woman-sitting-chair-with-abdominal-pain-pressing-her-hand-her-stomach.jpg",
-            bgColor: "bg-pink-100"
+            bgColor: "bg-pink-100",
+            Link: "/blog/lower-abdominal-pain-guide"
         },
         {
             id: 7,
@@ -72,7 +74,8 @@ const TrendingBlogs = () => {
             title: "20 Paleo Dessert recipes.",
             excerpt: "Discover 20 delicious and guilt-free Paleo dessert recipes that satisfy your sweet tooth while keeping it clean and grain-free.",
             image: "/high-angle-delicious-food-concept (1).jpg",
-            bgColor: "bg-indigo-100"
+            bgColor: "bg-indigo-100",
+            Link: "/blog/parleo-dessert-recipes"
         },
         {
             id: 8,
@@ -81,7 +84,8 @@ const TrendingBlogs = () => {
             title: "21 Dairy-Free Desserts",
             excerpt: "Indulge in sweet delights without the dairy—discover 21 creamy crave-worthy desserts perfect for a dairy-free lifestyle",
             image: "/layered-trifle-dessert-serving-glasses.jpg",
-            bgColor: "bg-teal-100"
+            bgColor: "bg-teal-100",
+            Link: "/blog/dairy-free-dessert-recipes"
         }
     ];
 
@@ -91,25 +95,29 @@ const TrendingBlogs = () => {
             id: 1,
             title: "The 20 Best Low Carb Vegetables.",
             date: "10 May, 2024",
-            image: "/avocado-tomato-tomatoes-732x549-thumbnail-732x549.jpg"
+            image: "/avocado-tomato-tomatoes-732x549-thumbnail-732x549.jpg",
+            link: "/recent-post/low-carb-vegetables-guide"
         },
         {
             id: 2,
             title: "Fruit And Vegetables Safety.",
             date: "09 May, 2024",
-            image: "/food-safety-fruits-vegetables_thumb-1-732x549.jpg"
+            image: "/food-safety-fruits-vegetables_thumb-1-732x549.jpg",
+            link: "/recent-post/fruit-vegetable-safety-guide"
         },
         {
             id: 3,
             title: "17 creative ways to eat more vegetables.",
             date: "08 May, 2024",
-            image: "/soup-kitchen-cooking-732x549-thumbnail-732x549.jpg"
+            image: "/soup-kitchen-cooking-732x549-thumbnail-732x549.jpg",
+            link: "/recent-post/creative-vegetable-ways"
         },
         {
             id: 4,
             title: "How to Eat More Vegetables for a Healthy Heart",
             date: "07 May, 2024",
-            image: "/man-tossing-salad-lettuce-spinach-green-vegetables-732x549-thumbnail (1).jpg"
+            image: "/man-tossing-salad-lettuce-spinach-green-vegetables-732x549-thumbnail (1).jpg",
+            link: "/recent-post/vegetable-heart-health-guide"
         }
     ];
 
@@ -354,26 +362,28 @@ const TrendingBlogs = () => {
                 </div>
     
                 <div className="space-y-4">
-                  {recentPosts.map((post) => (
-                    <motion.div
-                      key={post.id}
-                      whileHover={{ x: 5 }}
-                      className="flex gap-4 cursor-pointer group"
-                    >
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
-                      />
-                      <div className="flex-1">
-                        <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-purple-600 transition-colors mb-1">
-                          {post.title}
-                        </h4>
-                        <p className="text-xs text-gray-500">{post.date}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+  {recentPosts.map((post) => (
+    <Link to={post.link} className="flex-shrink-0 flex gap-4" key={post.id}>
+      <motion.div
+        whileHover={{ x: 5 }}
+        className="flex gap-4 cursor-pointer group"
+      >
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+        />
+        <div className="flex-1">
+          <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-purple-600 transition-colors mb-1">
+            {post.title}
+          </h4>
+          <p className="text-xs text-gray-500">{post.date}</p>
+        </div>
+      </motion.div>
+    </Link>
+  ))}
+</div>
+
               </motion.div>
     
               {/* Gallery */}

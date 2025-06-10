@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -8,6 +9,7 @@ const blogPosts = [
     readTime: "4 min read",
     image:
       "/red-heart-hands-woman.jpg",
+    link: "/latest-blog/heart-disease-gender-differences"
   },
   {
     title: "Home Sanctuary, Creating Spaces for Relaxation and Renewal",
@@ -16,6 +18,7 @@ const blogPosts = [
     readTime: "9 min read",
     image:
       "/Sanctuary.webp",
+    link: "/latest-blog/home-sanctuary-guide"
   },
   {
     title: "Quiz: Do You Know Your Heart-Healthy Foods?",
@@ -24,6 +27,7 @@ const blogPosts = [
     readTime: "12 min read",
     image:
       "/cleaning-friedge-732x549-thumbnail.jpg",
+    link: "/latest-blog/heart-healthy-foods-quiz"
   },
   {
     title: "FAQ's about Blood Pressure And Health Health.",
@@ -32,6 +36,7 @@ const blogPosts = [
     readTime: "6 min read",
     image:
       "/Doctor-measuring-a-patients-blood-pressure-thumbnail.jpg",
+    link: "/latest-blog/blood-pressure-faqs"
   },
   {
     title: "10 Ways to Boost Your Veggie Intake Without Salads",
@@ -40,6 +45,7 @@ const blogPosts = [
     readTime: "7 min read",
     image:
       "/mature-female-holding-green-smoothie-732-549-feature-thumb.jpg",
+    link: "/latest-blog/boost-veggie-intake"
   },
   {
     title: "Best Exercise For Heart Issues.",
@@ -48,6 +54,7 @@ const blogPosts = [
     readTime: "10 min read",
     image:
       "/GettyImages-961271834-thumbnail-732x549.jpg",
+    link: "/latest-blog/heart-healthy-exercises-guide"
   },
 ];
 
@@ -71,79 +78,76 @@ export default function LatestBlog() {
 
       <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
   {blogPosts.map((post, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.02, y: -8 }}
-      className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
-    >
-      {/* Image Container with Overlay */}
-      <div className="relative overflow-hidden">
-        <img
-          src={post.image}
-          alt="Blog Thumbnail"
-          className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        {/* Category Badge - Positioned on Image */}
-        <div className="absolute top-4 left-4">
-          <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-            {post.category}
-          </span>
-        </div>
-      </div>
-
-      {/* Content Container */}
-      <div className="p-6">
-        {/* Date */}
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>{post.date}</span>
+    <Link to={post.link} key={index} className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileHover={{ scale: 1.02, y: -8 }}
+        className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 h-full flex flex-col"
+      >
+        {/* Image */}
+        <div className="relative overflow-hidden">
+          <img
+            src={post.image}
+            alt="Blog Thumbnail"
+            className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute top-4 left-4">
+            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+              {post.category}
+            </span>
+          </div>
         </div>
 
-        {/* Title */}
-        <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors duration-200">
-          {post.title}
-        </h3>
+        {/* Content */}
+        <div className="p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>{post.date}</span>
+            </div>
 
-        {/* Read Time */}
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>{post.readTime}</span>
+            <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors duration-200">
+              {post.title}
+            </h3>
+
+            <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{post.readTime}</span>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between mt-auto">
+            <span className="inline-flex items-center gap-2 text-orange-600 font-medium text-sm">
+              Read More
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+            <button
+              onClick={(e) => e.preventDefault()}
+              className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
+            >
+              <svg className="w-5 h-5 text-gray-400 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Read More Button */}
-        <div className="flex items-center justify-between">
-          <button className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors duration-200 group/btn">
-            <span>Read More</span>
-            <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-          
-          {/* Like/Bookmark Icon */}
-          <button className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
-            <svg className="w-5 h-5 text-gray-400 hover:text-red-500 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Bottom Border Accent */}
-      <div className="h-1 bg-gradient-to-r from-orange-500 to-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-    </motion.div>
+        <div className="h-1 bg-gradient-to-r from-orange-500 to-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+      </motion.div>
+    </Link>
   ))}
 </div>
+
     </section>
   );
 }

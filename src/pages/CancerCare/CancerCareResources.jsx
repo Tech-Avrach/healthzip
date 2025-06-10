@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CancerCareResources = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -15,21 +16,24 @@ const CancerCareResources = () => {
       title: "Navigating Your Cancer Care Team",
       description: "Understanding the roles of oncologists, nurses, and support staff in your care...",
       fullDescription: "A comprehensive guide to understanding your cancer care team. Learn about the different specialists involved in your treatment including medical oncologists, radiation oncologists, surgical oncologists, nurses, social workers, and support staff. Discover how to communicate effectively with your team and advocate for your needs throughout your treatment journey.",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      link: "/health-conditions/cancer-care/cancer-care-resources/cancer-care-team-guide"
     },
     {
       id: 2,
       title: "Managing Side Effects During Treatment",
       description: "Learn effective strategies to cope with treatment side effects and improve quality of life...",
       fullDescription: "Practical guidance on managing common cancer treatment side effects including fatigue, nausea, pain, and emotional challenges. Discover evidence-based strategies, complementary therapies, and lifestyle modifications that can help you maintain your quality of life during treatment. Includes tips for nutrition, exercise, and emotional well-being.",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      link: "/health-conditions/cancer-care/cancer-care-resources/managing-side-effects-during-treatment"
     },
     {
       id: 3,
       title: "Building Your Support Network",
       description: "Creating a strong support system with family, friends, and community resources...",
       fullDescription: "Learn how to build and maintain a strong support network during your cancer journey. Discover resources for connecting with other cancer patients, finding support groups, and accessing community services. Includes guidance on communicating your needs to loved ones and finding professional counseling services when needed.",
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      link: "/health-conditions/cancer-care/cancer-care-resources/building-support-network"
     }
   ];
 
@@ -72,7 +76,8 @@ const CancerCareResources = () => {
                    title: 'Comprehensive Cancer Care Guide',
                    description: 'Your complete resource for navigating cancer treatment and care.',
                    fullDescription: 'This comprehensive guide provides essential information about cancer care, from understanding your diagnosis through treatment planning and recovery. Learn about different treatment options including surgery, chemotherapy, radiation therapy, immunotherapy, and targeted therapies. Discover how to work with your healthcare team, manage treatment side effects, maintain nutrition and wellness, and access support resources for you and your family.',
-                   image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+                   image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                   link: "/health-conditions/cancer-care/cancer-care-resources/comprehensive-cancer-care-guide"
                  })}>
               <div className="relative overflow-hidden">
                 <img 
@@ -167,7 +172,9 @@ const CancerCareResources = () => {
                   Close
                 </button>
                 <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                  <Link to={selectedCard.link}>
                   <span>Learn More</span>
+                  </Link>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
