@@ -17,6 +17,7 @@ import {
   FileText,
   Utensils,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function DigestiveHealthNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Treatment Guide",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-treatment-options"
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Patient Guidance",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/gastroenterology-questions-guide"
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
       category: "Patient Story",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/patient-digestive-journey"
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Wellness Guide",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-health-guide"
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-care-supportn-network"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Nutrition Guide",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/gut-health-nutrition-guide"
     },
   ]
 
@@ -548,9 +555,13 @@ export default function DigestiveHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
+
+                <Link to={selectedArticle.link || "#"}>
+                
                 <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
               </div>
             </div>
           </div>

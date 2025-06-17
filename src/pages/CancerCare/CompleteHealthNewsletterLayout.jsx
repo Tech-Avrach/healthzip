@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, User, Heart, ChevronRight, X, Star, Clock, Users, Shield, CheckCircle, Facebook, Twitter, Instagram, Youtube, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function CompleteHealthNewsletterLayout() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Explore comprehensive cancer treatment approaches including surgery, chemotherapy, radiation therapy, immunotherapy, and targeted treatments...",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop",
       readTime: "8 min read",
-      category: "Treatment Guide"
+      category: "Treatment Guide",
+      link: "/health-conditions/cancer-care/treatment/cancer-treatment-options-guide"
     },
     {
       id: 2,
@@ -49,7 +51,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Prepare for appointments with your oncologist, nurses, and care coordinators with this comprehensive list of important questions...",
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop",
       readTime: "6 min read",
-      category: "Patient Guidance"
+      category: "Patient Guidance",
+      link: '/health-conditions/cancer-care/treatment/cancer-care-questions-guide'
     },
     {
       id: 3,
@@ -57,7 +60,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Real experiences and practical advice from cancer survivors on managing treatment schedules, side effects, and emotional well-being...",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop",
       readTime: "10 min read",
-      category: "Patient Story"
+      category: "Patient Story",
+      link: "/health-conditions/cancer-care/treatment/cancer-treatment-guide"
     },
     {
       id: 4,
@@ -65,7 +69,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Learn effective strategies to cope with common side effects including fatigue, nausea, pain, and emotional challenges during treatment...",
       image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=300&h=200&fit=crop",
       readTime: "7 min read",
-      category: "Wellness Guide"
+      category: "Wellness Guide",
+      link: "/health-conditions/cancer-care/treatment/managing-cancer-treatment-side-effects"
     },
     {
       id: 5,
@@ -73,7 +78,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Discover how to create a strong support system with family, friends, healthcare providers, and community resources...",
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=300&h=200&fit=crop",
       readTime: "5 min read",
-      category: "Support Resources"
+      category: "Support Resources",
+      link: "#"
     },
     {
       id: 6,
@@ -81,7 +87,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Essential nutrition guidelines, meal planning tips, and dietary strategies to support your body during cancer treatment...",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=300&h=200&fit=crop",
       readTime: "9 min read",
-      category: "Nutrition Guide"
+      category: "Nutrition Guide",
+      link: "#"
     }
   ];
 
@@ -92,7 +99,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Learn about various cancer screening tests, when to get them, and how early detection can significantly improve treatment outcomes...",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop",
       readTime: "7 min read",
-      category: "Prevention"
+      category: "Prevention",
+      link: "#"
     },
     {
       id: 8,
@@ -100,7 +108,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Explore lifestyle factors, genetic predisposition, and environmental influences that affect cancer risk and prevention strategies...",
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=200&fit=crop",
       readTime: "8 min read",
-      category: "Risk Assessment"
+      category: "Risk Assessment",
+      link: "#"
     },
     {
       id: 9,
@@ -108,7 +117,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Learn to identify potential cancer symptoms and understand when to seek medical attention for concerning changes in your health...",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop",
       readTime: "6 min read",
-      category: "Health Awareness"
+      category: "Health Awareness",
+      link: "#"
     },
     {
       id: 10,
@@ -116,7 +126,8 @@ export default function CompleteHealthNewsletterLayout() {
       description: "Understanding hereditary cancer syndromes, genetic counseling, and testing options for those with family history of cancer...",
       image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=300&h=200&fit=crop",
       readTime: "9 min read",
-      category: "Genetic Health"
+      category: "Genetic Health",
+      link: "#"
     }
   ];
 
@@ -478,9 +489,11 @@ export default function CompleteHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
+                <Link to={selectedArticle.link}>
                 <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
               </div>
             </div>
           </div>

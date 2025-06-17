@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, Utensils, Users, Heart, Shield } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const DigestiveHealthResources = () => {
   const [selectedCard, setSelectedCard] = useState(null)
@@ -23,6 +24,7 @@ const DigestiveHealthResources = () => {
         "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Users className="w-5 h-5" />,
       category: "Care Team",
+      link: "/health-conditions/digestive-health/digestive-health-resources/digestive-care-team-guide"
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const DigestiveHealthResources = () => {
         "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Utensils className="w-5 h-5" />,
       category: "Conditions",
+      link: "/health-conditions/digestive-health/digestive-health-resources/managing-digestive-conditions"
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ const DigestiveHealthResources = () => {
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Heart className="w-5 h-5" />,
       category: "Support",
+      link: "/health-conditions/digestive-health/digestive-health-resources/digestive-health-support-resources"
     },
     {
       id: 4,
@@ -56,6 +60,7 @@ const DigestiveHealthResources = () => {
         "https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Shield className="w-5 h-5" />,
       category: "Prevention",
+      link: "/health-conditions/digestive-health/digestive-health-resources/digestive-health-prevention"
     },
   ]
 
@@ -65,6 +70,7 @@ const DigestiveHealthResources = () => {
       description: "What to expect during your digestive health assessment",
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/digestive-health/digestive-health-resources/comprehensive-digestive-evaluations"
     },
     {
       title: "Gut Microbiome Health",
@@ -77,6 +83,7 @@ const DigestiveHealthResources = () => {
       description: "Making the most of your digestive care appointments",
       image:
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/digestive-health/digestive-health-resources/gastroenterologist-consultation-guide"
     },
   ]
 
@@ -134,6 +141,7 @@ const DigestiveHealthResources = () => {
                   image:
                     "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
                   category: "Complete Guide",
+                  link: "/health-conditions/digestive-health/digestive-health-resources/comprehensive-digestive-health-guide"
                 })
               }
             >
@@ -332,10 +340,13 @@ const DigestiveHealthResources = () => {
                 >
                   Close
                 </button>
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+
+                <Link to={selectedCard.link || "#"} className="no-underline">
+                  <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

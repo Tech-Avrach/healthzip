@@ -17,7 +17,20 @@ import CancerTreatmentOptionsGuide from '@/pages/CancerCare/treatment/Blog1';
 import CancerCareQuestionsGuide from '@/pages/CancerCare/treatment/Blog2';
 import CancerTreatmentGuide from '@/pages/CancerCare/treatment/Blog3';
 import ManagingCancerTreatmentSideEffects from '@/pages/CancerCare/treatment/Blog4';
+import DigestiveTreatmentOptions from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog1';
+import GastroenterologyQuestionsGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog2';
+import PatientDigestiveJourney from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog3';
+import DigestiveHealthGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog4';
+import DigestiveCareSupportNetwork from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog5';
+import GutHealthNutritionGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog6';
 import DigestiveHealth from '@/pages/DigestiveHealth/DigestiveHealth';
+import DigestiveCareTeamGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog1';
+import ManagingDigestiveConditions from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog2';
+import DigestiveHealthSupportResources from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog3';
+import DigestiveHealthPrevention from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog4';
+import ComprehensiveDigestiveHealthGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog5';
+import ComprehensiveDigestiveEvaluations from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog6';
+import GastroenterologistConsultationGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog8';
 import EyeHealth from '@/pages/EyeHealth/EyeHealth';
 import BestVegan from '@/pages/Featured/BestVegan/BestVegan';
 import Healthylifestyle from '@/pages/Featured/Healthylifesyle/Healthylifestyle';
@@ -168,6 +181,42 @@ const AllRoutes = () => {
 <Route path="/health-conditions/cancer-care/treatment/managing-cancer-treatment-side-effects" element={<ManagingCancerTreatmentSideEffects />} />
 
 
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/digestive-care-team-guide" element={<DigestiveCareTeamGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/managing-digestive-conditions" element={<ManagingDigestiveConditions />} />
+
+DigestiveHealthSupportResources
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/digestive-health-support-resources" element={<DigestiveHealthSupportResources />} />
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/digestive-health-prevention" element={<DigestiveHealthPrevention />} />
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/comprehensive-digestive-health-guide" element={<ComprehensiveDigestiveHealthGuide />} />
+
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/comprehensive-digestive-evaluations" element={<ComprehensiveDigestiveEvaluations />} />
+
+
+
+<Route path="/health-conditions/digestive-health/digestive-health-resources/gastroenterologist-consultation-guide" element={<GastroenterologistConsultationGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-treatment-options" element={<DigestiveTreatmentOptions />} />
+
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/gastroenterology-questions-guide" element={<GastroenterologyQuestionsGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/patient-digestive-journey" element={<PatientDigestiveJourney />} />
+
+
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-health-guide" element={<DigestiveHealthGuide />} />
+
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-care-supportn-network" element={<DigestiveCareSupportNetwork />} />
+
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/gut-health-nutrition-guide" element={<GutHealthNutritionGuide />} />
 
     </Routes>
     </>
