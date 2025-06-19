@@ -17,6 +17,7 @@ import {
   FileText,
   Eye,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function EyeHealthNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Vision Guide",
+      link: "/health-conditions/eye-health/blogs/vision-correction-guide"
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Patient Guidance",
+      link: "/health-conditions/eye-health/blogs/eye-care-questions-guide"
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
       category: "Patient Story",
+      link: "/health-conditions/eye-health/blogs/eye-conditions-guide"
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1511715282680-fbf93a50e721?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Wellness Guide",
+      link: "/health-conditions/eye-health/blogs/digital-eye-strain-guide"
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
+      link: "/health-conditions/eye-health/blogs/vision-care-support-network"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Nutrition Guide",
+      link:"/health-conditions/eye-health/blogs/eye-health-nutrition-guide"
     },
   ]
 
@@ -124,6 +131,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Prevention",
+      link: "/health-conditions/eye-health/blogs/eye-examinations-guide"
     },
     {
       id: 8,
@@ -134,6 +142,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1616329429191-c5c3f11a7e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Risk Assessment",
+      link: "/health-conditions/eye-health/blogs/eye-health-guide"
     },
     {
       id: 9,
@@ -144,6 +153,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1551601651-09ebecb44d8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Health Awareness",
+      link: "/health-conditions/eye-health/blogs/eye-problem-warning-signs"
     },
     {
       id: 10,
@@ -154,6 +164,7 @@ export default function EyeHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Genetic Health",
+      link: "/health-conditions/eye-health/blogs/genetic-eye-conditions-guide"
     },
   ]
 
@@ -509,6 +520,8 @@ export default function EyeHealthNewsletterLayout() {
             </button>
           </div>
           <p className="text-gray-600 text-sm mb-3">"Understanding Vision Correction Options" just published!</p>
+
+
           <button className="bg-gradient-to-r from-purple-500 to-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             Read Now
           </button>
@@ -548,9 +561,12 @@ export default function EyeHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
-                <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <Link to={selectedArticle.link || "#"}>
+              <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
+                
               </div>
             </div>
           </div>

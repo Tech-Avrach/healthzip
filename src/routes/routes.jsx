@@ -34,6 +34,22 @@ import DigestiveHealthPrevention from '@/pages/DigestiveHealth/DigestiveHealthRe
 import ComprehensiveDigestiveHealthGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog5';
 import ComprehensiveDigestiveEvaluations from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog6';
 import GastroenterologistConsultationGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog8';
+import ComprehensiveEyeHealthGuide from '@/pages/EyeHealth/Blog/Blog1';
+import VisionCorrectionGuide from '@/pages/EyeHealth/Blog/Blog10';
+import EyeCareQuestionsGuide from '@/pages/EyeHealth/Blog/Blog11';
+import VisionCareSupportNetwork from '@/pages/EyeHealth/Blog/Blog14';
+import EyeHealthNutritionGuide from '@/pages/EyeHealth/Blog/Blog15';
+import EyeExaminationsGuide from '@/pages/EyeHealth/Blog/Blog16';
+import EyeHealthGuide from '@/pages/EyeHealth/Blog/Blog17';
+import EyeProblemWarningSigns from '@/pages/EyeHealth/Blog/Blog18';
+import GeneticEyeConditionsGuide from '@/pages/EyeHealth/Blog/Blog19';
+import EyeCareTeamGuide from '@/pages/EyeHealth/Blog/Blog2';
+import EyeConditionsGuide from '@/pages/EyeHealth/Blog/Blog3';
+import VisionHealthSupportResources from '@/pages/EyeHealth/Blog/Blog4';
+import DigitalEyeStrainGuide from '@/pages/EyeHealth/Blog/Blog6';
+import ComprehensiveEyeExamsGuide from '@/pages/EyeHealth/Blog/Blog7';
+import VisionTherapyGuide from '@/pages/EyeHealth/Blog/Blog8';
+import OptometristConsultationsGuide from '@/pages/EyeHealth/Blog/Blog9';
 import EyeHealth from '@/pages/EyeHealth/EyeHealth';
 import BestVegan from '@/pages/Featured/BestVegan/BestVegan';
 import Healthylifestyle from '@/pages/Featured/Healthylifesyle/Healthylifestyle';
@@ -231,6 +247,57 @@ DigestiveHealthSupportResources
 <Route path="/health-conditions/digestive-health/digestive-care-treatments/genetic-digestive-disorders" element={<GeneticDigestiveDisorders />} />
 
 
+<Route path="/health-conditions/eye-health/blogs/comprehensive-eye-health-guide" element={<ComprehensiveEyeHealthGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/eye-care-team-guide" element={<EyeCareTeamGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/eye-conditions-guide" element={<EyeConditionsGuide />} />
+
+
+
+<Route path="/health-conditions/eye-health/blogs/vision-health-support-resources" element={<VisionHealthSupportResources />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/digital-eye-strain-guide" element={<DigitalEyeStrainGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/comprehensive-eye-exams-guide" element={<ComprehensiveEyeExamsGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/vision-therapy-guide" element={<VisionTherapyGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/optometrist-consultations-guide" element={<OptometristConsultationsGuide />} />
+
+
+
+<Route path="/health-conditions/eye-health/blogs/eye-care-questions-guide" element={<EyeCareQuestionsGuide />} />
+
+<Route path="/health-conditions/eye-health/blogs/eye-conditions-guide" element={<EyeConditionsGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/vision-correction-guide" element={<VisionCorrectionGuide />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/digital-eye-strain-guide" element={<DigitalEyeStrainGuide />} />
+
+<Route path="/health-conditions/eye-health/blogs/vision-care-support-network" element={<VisionCareSupportNetwork />} />
+
+
+<Route path="/health-conditions/eye-health/blogs/eye-health-nutrition-guide" element={<EyeHealthNutritionGuide />} />
+
+EyeExaminationsGuide
+
+<Route path="/health-conditions/eye-health/blogs/eye-examinations-guide" element={<EyeExaminationsGuide />} />
+
+<Route path="/health-conditions/eye-health/blogs/eye-health-guide" element={< EyeHealthGuide/>} />
+
+<Route path="/health-conditions/eye-health/blogs/eye-problem-warning-signs" element={< EyeProblemWarningSigns/>} />
+
+
+<Route path="/health-conditions/eye-health/blogs/genetic-eye-conditions-guide" element={< GeneticEyeConditionsGuide/>} />
 
     </Routes>
     </>
