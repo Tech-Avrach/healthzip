@@ -18,11 +18,14 @@ import CancerCareQuestionsGuide from '@/pages/CancerCare/treatment/Blog2';
 import CancerTreatmentGuide from '@/pages/CancerCare/treatment/Blog3';
 import ManagingCancerTreatmentSideEffects from '@/pages/CancerCare/treatment/Blog4';
 import DigestiveTreatmentOptions from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog1';
+import GeneticDigestiveDisorders from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog10';
 import GastroenterologyQuestionsGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog2';
 import PatientDigestiveJourney from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog3';
 import DigestiveHealthGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog4';
 import DigestiveCareSupportNetwork from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog5';
 import GutHealthNutritionGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog6';
+import DigestiveCheckupsGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog7';
+import DigestiveProblemGuide from '@/pages/DigestiveHealth/DigestiveCareTreatments/Blog9';
 import DigestiveHealth from '@/pages/DigestiveHealth/DigestiveHealth';
 import DigestiveCareTeamGuide from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog1';
 import ManagingDigestiveConditions from '@/pages/DigestiveHealth/DigestiveHealthResources/Blog2';
@@ -217,6 +220,17 @@ DigestiveHealthSupportResources
 
 
 <Route path="/health-conditions/digestive-health/digestive-care-treatments/gut-health-nutrition-guide" element={<GutHealthNutritionGuide />} />
+
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-checkups-guide" element={<DigestiveCheckupsGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-health-guide" element={<DigestiveHealthGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/digestive-problem-guide" element={<DigestiveProblemGuide />} />
+
+<Route path="/health-conditions/digestive-health/digestive-care-treatments/genetic-digestive-disorders" element={<GeneticDigestiveDisorders />} />
+
+
 
     </Routes>
     </>

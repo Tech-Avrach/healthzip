@@ -131,6 +131,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Prevention",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-checkups-guide"
     },
     {
       id: 8,
@@ -141,6 +142,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Risk Assessment",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-health-guide"
     },
     {
       id: 9,
@@ -151,6 +153,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Health Awareness",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/digestive-problem-guide"
     },
     {
       id: 10,
@@ -161,6 +164,7 @@ export default function DigestiveHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Genetic Health",
+      link: "/health-conditions/digestive-health/digestive-care-treatments/genetic-digestive-disorders"
     },
   ]
 
