@@ -88,6 +88,11 @@ import SkinCare from '@/pages/wellness/cbd/SkinCare/SkinCare';
 import SleepHealth from '@/pages/wellness/cbd/SleepHealth/SleepHealth';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import MentalHealthGuide from '../pages/MentalHealth/Blogs/Blog1';
+import MentalHealthTeamGuide from '@/pages/MentalHealth/Blogs/Blog2';
+import ManagingCommonMentalHealth from '@/pages/MentalHealth/Blogs/Blog3';
+import MentalHealthSupportResources from '@/pages/MentalHealth/Blogs/Blog4';
+import DigitalMentalHealthGuide from '@/pages/MentalHealth/Blogs/Blog5';
 
 
 
@@ -298,6 +303,20 @@ EyeExaminationsGuide
 
 
 <Route path="/health-conditions/eye-health/blogs/genetic-eye-conditions-guide" element={< GeneticEyeConditionsGuide/>} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-guide" element={< MentalHealthGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-team-guide" element={< MentalHealthTeamGuide />} />
+
+<Route path="/health-conditions/mental-health/blogs/managing-common-mental-health" element={< ManagingCommonMentalHealth />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-support-resources" element={< MentalHealthSupportResources />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/digital-mental-health-guide" element={< DigitalMentalHealthGuide />} />
 
     </Routes>
     </>

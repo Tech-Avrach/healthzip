@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, Brain, Users, Heart, Shield } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const MentalHealthResources = () => {
   const [selectedCard, setSelectedCard] = useState(null)
@@ -22,6 +23,7 @@ const MentalHealthResources = () => {
         "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Users className="w-5 h-5" />,
       category: "Care Team",
+      link: "/health-conditions/mental-health/blogs/mental-health-team-guide"
     },
     {
       id: 2,
@@ -33,6 +35,7 @@ const MentalHealthResources = () => {
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Brain className="w-5 h-5" />,
       category: "Conditions",
+      link: "/health-conditions/mental-health/blogs/managing-common-mental-health"
     },
     {
       id: 3,
@@ -44,6 +47,7 @@ const MentalHealthResources = () => {
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Heart className="w-5 h-5" />,
       category: "Support",
+      link: "/health-conditions/mental-health/blogs/mental-health-support-resources"
     },
     {
       id: 4,
@@ -55,6 +59,7 @@ const MentalHealthResources = () => {
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Shield className="w-5 h-5" />,
       category: "Digital Tools",
+      link: "/health-conditions/mental-health/blogs/digital-mental-health-guide"
     },
   ]
 
@@ -132,6 +137,7 @@ const MentalHealthResources = () => {
                   image:
                     "https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
                   category: "Complete Guide",
+                  link: "/health-conditions/mental-health/blogs/mental-health-guide"
                 })
               }
             >
@@ -333,10 +339,13 @@ const MentalHealthResources = () => {
                 >
                   Close
                 </button>
+                <Link to={selectedCard.link || "#"}>
+                
                 <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
+                </Link>
               </div>
             </div>
           </div>
