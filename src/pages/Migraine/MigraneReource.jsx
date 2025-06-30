@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, Zap, Users, Heart, Shield } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const MigrainerHealthResources = () => {
   const [selectedCard, setSelectedCard] = useState(null)
@@ -21,6 +22,7 @@ const MigrainerHealthResources = () => {
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Users className="w-5 h-5" />,
       category: "Care Team",
+      link: "/health-conditions/migraine/blogs/migraine-care-team-guide"
     },
     {
       id: 2,
@@ -32,6 +34,7 @@ const MigrainerHealthResources = () => {
         "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Zap className="w-5 h-5" />,
       category: "Conditions",
+      link: "/health-conditions/migraine/blogs/managing-common-migraine-types"
     },
     {
       id: 3,
@@ -43,6 +46,7 @@ const MigrainerHealthResources = () => {
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Heart className="w-5 h-5" />,
       category: "Support",
+      link: "/health-conditions/migraine/blogs/migraine-support-resources"
     },
     {
       id: 4,
@@ -53,6 +57,7 @@ const MigrainerHealthResources = () => {
       image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       icon: <Shield className="w-5 h-5" />,
       category: "Prevention",
+      link: "/health-conditions/migraine/blogs/digital-migraine-prevention"
     },
   ]
 
@@ -61,18 +66,21 @@ const MigrainerHealthResources = () => {
       title: "Comprehensive Migraine Assessments",
       description: "What to expect during your neurological examination",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      link: "/health-conditions/migraine/blogs/migraine-assessment-guide"
     },
     {
       title: "Migraine Treatment Options",
       description: "Exploring preventive and acute migraine therapies",
       image:
         "https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/migraine/blogs/migraine-treatment-options" 
     },
     {
       title: "Neurologist Consultations",
       description: "Making the most of your headache specialist appointments",
       image:
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/migraine/blogs/neurologist-consultation-guide"
     },
   ]
 
@@ -130,6 +138,7 @@ const MigrainerHealthResources = () => {
                   image:
                     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
                   category: "Complete Guide",
+                  link: "/health-conditions/migraine/blogs/migraine-management-guide"
                 })
               }
             >
@@ -316,10 +325,12 @@ const MigrainerHealthResources = () => {
                 >
                   Close
                 </button>
+                <Link to={selectedCard.link || "#"}>
                 <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -106,6 +106,14 @@ import MentalHealthCheckupsGuide from '@/pages/MentalHealth/Blogs/Blog15';
 import MentalHealthRiskFactorsGuide from '@/pages/MentalHealth/Blogs/Blog16';
 import FamilyHistoryGeneticMentalHealth from '@/pages/MentalHealth/Blogs/Blog17';
 import MentalHealthWarningSignsGuide from '@/pages/MentalHealth/Blogs/Blog18';
+import MigraineManagementGuide from '@/pages/Migraine/Blog/Blog1';
+import MigraineCareTeamGuide from '@/pages/Migraine/Blog/Blog2';
+import ManagingCommonMigraineTypes from '@/pages/Migraine/Blog/Blog3';
+import MigraineSupportResources from '@/pages/Migraine/Blog/Blog4';
+import DigitalMigrainePrevention from '@/pages/Migraine/Blog/Blog5';
+import MigraineTreatmentOptions from '@/pages/Migraine/Blog/Blog7';
+import MigraineAssessmentGuide from '@/pages/Migraine/Blog/Blog6';
+import NeurologistConsultationGuide from '@/pages/Migraine/Blog/Blog8';
 
 
 
@@ -357,21 +365,33 @@ EyeExaminationsGuide
 
 <Route path="/health-conditions/mental-health/blogs/nutrition-mental-health-guide" element={< NutritionMentalHealthGuide />} />
 
-
 <Route path="/health-conditions/mental-health/blogs/mental-health-checkups" element={< MentalHealthCheckupsGuide />} />
-
 
 <Route path="/health-conditions/mental-health/blogs/mental-health-risk-factors" element={< MentalHealthRiskFactorsGuide />} />
 
-
 <Route path="/health-conditions/mental-health/blogs/family-history-genetic-mental-health" element={< FamilyHistoryGeneticMentalHealth />} />
-
-MentalHealthWarningSignsGuide
 
 <Route path="/health-conditions/mental-health/blogs/family-history-genetic-mental-health" element={< MentalHealthWarningSignsGuide />} />
 
 
 
+<Route path="/health-conditions/migraine/blogs/migraine-management-guide" element={< MigraineManagementGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-care-team-guide" element={<MigraineCareTeamGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/managing-common-migraine-types" element={<ManagingCommonMigraineTypes />} />
+
+
+<Route path="/health-conditions/migraine/blogs/migraine-support-resources" element={<MigraineSupportResources />} />
+
+<Route path="/health-conditions/migraine/blogs/digital-migraine-prevention" element={<DigitalMigrainePrevention />} />
+
+
+<Route path="/health-conditions/migraine/blogs/migraine-assessment-guide" element={<MigraineAssessmentGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-treatment-options" element={<MigraineTreatmentOptions />} />
+
+<Route path="/health-conditions/migraine/blogs/neurologist-consultation-guide" element={<NeurologistConsultationGuide />} />
     </Routes>
     </>
   );
