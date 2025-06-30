@@ -69,17 +69,20 @@ const MentalHealthResources = () => {
       description: "What to expect during your mental health evaluation",
       image:
         "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/mental-health/blogs/mental-health-assessments-guide"
     },
     {
       title: "Therapy Approaches & Modalities",
       description: "Understanding different therapeutic techniques and approaches",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        link: "/health-conditions/mental-health/blogs/therapy-approaches-guide"
     },
     {
       title: "Mental Health Professional Consultations",
       description: "Making the most of your therapy and psychiatric appointments",
       image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      link: "/health-conditions/mental-health/blogs/mental-health-assessments-guide"
     },
   ]
 

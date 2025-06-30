@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { User, Calendar, Check, Brain, HeartPulse, Moon, Sun, Activity, Shield, BookOpen, LifeBuoy } from "lucide-react"
+import { User, Calendar, Check, Brain, HeartPulse, Moon,Star, Sun, Activity, Shield, BookOpen, LifeBuoy } from "lucide-react"
 
 export default function ManagingCommonMentalHealth() {
     const [email, setEmail] = useState("")

@@ -93,6 +93,19 @@ import MentalHealthTeamGuide from '@/pages/MentalHealth/Blogs/Blog2';
 import ManagingCommonMentalHealth from '@/pages/MentalHealth/Blogs/Blog3';
 import MentalHealthSupportResources from '@/pages/MentalHealth/Blogs/Blog4';
 import DigitalMentalHealthGuide from '@/pages/MentalHealth/Blogs/Blog5';
+import TherapyOptionsGuide from '@/pages/MentalHealth/Blogs/Blog9';
+import MentalHealthAssessmentsGuide from '@/pages/MentalHealth/Blogs/Blog6';
+import MentalHealthConsultationsGuide from '@/pages/MentalHealth/Blogs/Blog8';
+import TherapyApproachesGuide from '@/pages/MentalHealth/Blogs/Blog7';
+import MentalHealthQuestionsGuide from '@/pages/MentalHealth/Blogs/Blog10';
+import MentalHealthJourney from '@/pages/MentalHealth/Blogs/Blog11';
+import ManagingDigitalMentalHealth from '@/pages/MentalHealth/Blogs/Blog12';
+import MentalHealthSupportNetwork from '@/pages/MentalHealth/Blogs/Blog13';
+import NutritionMentalHealthGuide from '@/pages/MentalHealth/Blogs/Blog14';
+import MentalHealthCheckupsGuide from '@/pages/MentalHealth/Blogs/Blog15';
+import MentalHealthRiskFactorsGuide from '@/pages/MentalHealth/Blogs/Blog16';
+import FamilyHistoryGeneticMentalHealth from '@/pages/MentalHealth/Blogs/Blog17';
+import MentalHealthWarningSignsGuide from '@/pages/MentalHealth/Blogs/Blog18';
 
 
 
@@ -317,6 +330,47 @@ EyeExaminationsGuide
 
 
 <Route path="/health-conditions/mental-health/blogs/digital-mental-health-guide" element={< DigitalMentalHealthGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-assessments-guide" element={< MentalHealthAssessmentsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/therapy-approaches-guide" element={< TherapyApproachesGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-assessments-guide" element={< MentalHealthConsultationsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/therapy-options-guide" element={< TherapyOptionsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-questions-guide" element={< MentalHealthQuestionsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-journey" element={< MentalHealthJourney />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/managing-digital-mental-health" element={< ManagingDigitalMentalHealth />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/managing-digital-mental-health" element={< MentalHealthSupportNetwork />} />
+
+<Route path="/health-conditions/mental-health/blogs/nutrition-mental-health-guide" element={< NutritionMentalHealthGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-checkups" element={< MentalHealthCheckupsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/mental-health-risk-factors" element={< MentalHealthRiskFactorsGuide />} />
+
+
+<Route path="/health-conditions/mental-health/blogs/family-history-genetic-mental-health" element={< FamilyHistoryGeneticMentalHealth />} />
+
+MentalHealthWarningSignsGuide
+
+<Route path="/health-conditions/mental-health/blogs/family-history-genetic-mental-health" element={< MentalHealthWarningSignsGuide />} />
+
+
 
     </Routes>
     </>

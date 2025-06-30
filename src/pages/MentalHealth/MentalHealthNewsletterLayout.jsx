@@ -17,6 +17,7 @@ import {
   FileText,
   Brain,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function MentalHealthNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Therapy Guide",
+      link: "/health-conditions/mental-health/blogs/therapy-options-guide",
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Patient Guidance",
+      link: "/health-conditions/mental-health/blogs/mental-health-questions-guide",
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
       category: "Patient Story",
+      link: "/health-conditions/mental-health/blogs/mental-health-journey",
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Digital Wellness",
+      link: "/health-conditions/mental-health/blogs/managing-digital-mental-health",
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
+      link: "/health-conditions/mental-health/blogs/managing-digital-mental-health"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Nutrition Guide",
+      link: "/health-conditions/mental-health/blogs/nutrition-mental-health-guide"
     },
   ]
 
@@ -124,6 +131,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Prevention",
+      link: "/health-conditions/mental-health/blogs/mental-health-checkups"
     },
     {
       id: 8,
@@ -134,6 +142,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Risk Assessment",
+      link: "/health-conditions/mental-health/blogs/mental-health-risk-factors"
     },
     {
       id: 9,
@@ -144,6 +153,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Health Awareness",
+      link: "/health-conditions/mental-health/blogs/family-history-genetic-mental-health"
     },
     {
       id: 10,
@@ -154,6 +164,7 @@ export default function MentalHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Genetic Health",
+      link: "/health-conditions/mental-health/blogs/family-history-genetic-mental-health"
     },
   ]
 
@@ -548,9 +559,11 @@ export default function MentalHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
-                <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+<Link to={selectedArticle?.link || "#"}>
+<button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+</Link>
               </div>
             </div>
           </div>
