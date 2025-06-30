@@ -124,6 +124,20 @@ import MigraineEarlyWarningGuide from '@/pages/Migraine/Blog/Blog15';
 import PediatricMigraineGuide from '@/pages/Migraine/Blog/Blog17';
 import MigraineManagementTeamGuide from '@/pages/Migraine/Blog/Blog18';
 import HormonalMigrainesGuide from '@/pages/Migraine/Blog/Blog16';
+import RecipeTypesGuide from '@/pages/wellness/Recipes/Blog/Blog5';
+import NutritionistQuestionsGuide from '@/pages/wellness/Recipes/Blog/Blog6';
+import KitchenTransformationGuide from '@/pages/wellness/Recipes/Blog/Blog7';
+import MealPrepGuide from '@/pages/wellness/Recipes/Blog/Blog8';
+import CulinarySupportNetworkGuide from '@/pages/wellness/Recipes/Blog/Blog9';
+import CookingNutritionGuide from '@/pages/wellness/Recipes/Blog/Blog10';
+import CookingScienceGuide from '@/pages/wellness/Recipes/Blog/Blog11';
+import KitchenEquipmentGuide from '@/pages/wellness/Recipes/Blog/Blog12';
+import FlavorBuildingGuide from '@/pages/wellness/Recipes/Blog/Blog13';
+import FoodSafetyGuide from '@/pages/wellness/Recipes/Blog/Blog14';
+import WelcomeToHealthlineRecipes from '@/pages/wellness/Recipes/Blog/Blog1';
+import HealthyRecipesGuide from '@/pages/wellness/Recipes/Blog/Blog2';
+import MealPrepGuideBeginners from '@/pages/wellness/Recipes/Blog/Blog4';
+import AntiInflammatoryRecipesGuide from '@/pages/wellness/Recipes/Blog/Blog3';
 
 
 
@@ -427,7 +441,40 @@ ChronicMigraineGuide
 
 <Route path="/health-conditions/migraine/blogs/migraine-management-team" element={<MigraineManagementTeamGuide />} />
 
+<Route path="/health-conditions/migraine/blogs/migraine-management-team" element={<MigraineManagementTeamGuide />} />
 
+
+
+
+<Route path="/wellness/recipes/blogs/welcome-to-healthline-recipes" element={<WelcomeToHealthlineRecipes />} />
+
+<Route path="/wellness/recipes/blogs/healthy-recipes-guide" element={<HealthyRecipesGuide />} />
+
+
+<Route path="/wellness/recipes/blogs/anti-inflammatory-recipes" element={<AntiInflammatoryRecipesGuide />} />
+
+<Route path="/wellness/recipes/blogs/meal-prep-guide-beginners" element={<MealPrepGuideBeginners />} />
+
+<Route path="/wellness/recipes/blogs/recipe-types" element={<RecipeTypesGuide />} />
+
+<Route path="/wellness/recipes/blogs/nutritionist-questions-guide" element={<NutritionistQuestionsGuide />} />
+
+<Route path="/wellness/recipes/blogs/kitchen-transformation" element={<KitchenTransformationGuide />} />
+
+<Route path="/wellness/recipes/blogs/meal-prep-guide" element={<MealPrepGuide />} />
+
+<Route path="/wellness/recipes/blogs/culinary-support-network" element={<CulinarySupportNetworkGuide />} />
+
+<Route path="/wellness/recipes/blogs/cooking-nutrition-guide" element={<CookingNutritionGuide />} />
+
+
+<Route path="/wellness/recipes/blogs/cooking-science" element={<CookingScienceGuide />} />
+
+<Route path="/wellness/recipes/blogs/kitchen-equipment-guide" element={<KitchenEquipmentGuide />} />
+
+<Route path="/wellness/recipes/blogs/flavor-building-guide" element={<FlavorBuildingGuide />} />
+
+<Route path="/wellness/recipes/blogs/food-safety" element={<FoodSafetyGuide />} />
     </Routes>
     </>
   );

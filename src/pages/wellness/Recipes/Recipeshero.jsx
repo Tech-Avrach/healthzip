@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Heart, Share2, BookOpen, Clock, X } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const HealthlineRecipesPage = () => {
   const [selectedArticle, setSelectedArticle] = useState(null)
@@ -32,6 +33,7 @@ const HealthlineRecipesPage = () => {
       category: "Healthy Eating",
       readTime: "8 min read",
       difficulty: "Easy",
+      link: "/wellness/recipes/blogs/healthy-recipes-guide"
     },
     {
       id: 2,
@@ -41,6 +43,7 @@ const HealthlineRecipesPage = () => {
       category: "Anti-Inflammatory",
       readTime: "6 min read",
       difficulty: "All Levels",
+      link: "/wellness/recipes/blogs/anti-inflammatory-recipes"
     },
     {
       id: 3,
@@ -50,6 +53,7 @@ const HealthlineRecipesPage = () => {
       category: "Meal Prep",
       readTime: "12 min read",
       difficulty: "Beginner",
+      link: "/wellness/recipes/blogs/meal-prep-guide-beginners"
     },
   ]
 
@@ -170,6 +174,7 @@ const HealthlineRecipesPage = () => {
                   category: "Editorial",
                   readTime: "5 min read",
                   difficulty: "All Levels",
+                  link: "/wellness/recipes/blogs/welcome-to-healthline-recipes"
                 })
               }
             >
@@ -276,10 +281,12 @@ const HealthlineRecipesPage = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="flex gap-4">
+                <Link to={selectedArticle.link || "#"} >
                 <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
                   <BookOpen size={18} />
                   Read Full Recipe
                 </button>
+                </Link>
                 <button
                   onClick={() => toggleLike(selectedArticle.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${

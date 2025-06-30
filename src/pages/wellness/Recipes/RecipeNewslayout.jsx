@@ -17,6 +17,7 @@ import {
   FileText,
   ChefHat,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function RecipesNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function RecipesNewsletterLayout() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrlwQiHIHGvNv6X4IkijYTCWMifwMgJPLaQ&s",
       readTime: "8 min read",
       category: "Cooking Guide",
+      link: "/wellness/recipes/blogs/recipe-types"
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function RecipesNewsletterLayout() {
         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Nutrition Guidance",
+      link: "/wellness/recipes/blogs/nutritionist-questions-guide"
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function RecipesNewsletterLayout() {
         "https://k-c-a.co.uk/wp-content/uploads/2023/12/kitchen-renovation-transformations-by-KCA-Berkshire.jpg",
       readTime: "10 min read",
       category: "Success Story",
+      link: "/wellness/recipes/blogs/kitchen-transformation"
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function RecipesNewsletterLayout() {
         "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Meal Prep Guide",
+      link: "/wellness/recipes/blogs/meal-prep-guide"
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function RecipesNewsletterLayout() {
         "https://krghospitality.com/wp-content/uploads/2024/07/MicrosoftDesigner_AIGeneratedImage_ChefLeadingATeamMeeting.jpeg",
       readTime: "5 min read",
       category: "Support Resources",
+      link: "/wellness/recipes/blogs/culinary-support-network"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function RecipesNewsletterLayout() {
         "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Nutrition Guide",
+      link: "/wellness/recipes/blogs/cooking-nutrition-guide"
     },
   ]
 
@@ -124,6 +131,7 @@ export default function RecipesNewsletterLayout() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-sHKwnlYP2In_SPebdQ3Nc1CkL0h4fBP3kA&s",
       readTime: "7 min read",
       category: "Food Science",
+      link: "/wellness/recipes/blogs/cooking-science"
     },
     {
       id: 8,
@@ -134,6 +142,7 @@ export default function RecipesNewsletterLayout() {
         "https://res.cloudinary.com/jerrick/image/upload/v1731042328/672d9c1801f945001d49c2ae.jpg",
       readTime: "8 min read",
       category: "Equipment Guide",
+      link: "/wellness/recipes/blogs/kitchen-equipment-guide"
     },
     {
       id: 9,
@@ -144,6 +153,7 @@ export default function RecipesNewsletterLayout() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurBFs02wXJRtLvu_ZBZuyf0UgS_fE78w8tA&s",
       readTime: "6 min read",
       category: "Technique Guide",
+      link: "/wellness/recipes/blogs/flavor-building-guide"
     },
     {
       id: 10,
@@ -154,6 +164,7 @@ export default function RecipesNewsletterLayout() {
         "https://safetyculture.com/_next/image/?url=https%3A%2F%2Fwp-website.safetyculture.com%2Fwp-content%2Fuploads%2Fsites%2F3%2F2021%2F06%2Ffood-handling-practices.png&w=1920&q=75",
       readTime: "9 min read",
       category: "Safety Guide",
+      link: "/wellness/recipes/blogs/food-safety"
     },
   ]
 
@@ -548,9 +559,11 @@ export default function RecipesNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
+                <Link to={selectedArticle.link || "#"} >
                 <button className="bg-gradient-to-r from-orange-500 to-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
               </div>
             </div>
           </div>
