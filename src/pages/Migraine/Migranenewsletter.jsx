@@ -20,6 +20,7 @@ import {
   Heart,
   Calendar,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function ComprehensiveMigrainerNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -66,6 +67,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Treatment Guide",
       fullContent:
         "Migraine medications fall into two main categories: preventive (prophylactic) and acute (abortive) treatments. Preventive medications are taken daily to reduce the frequency and severity of migraines, while acute treatments are used during a migraine attack to stop or reduce symptoms. Triptans like sumatriptan work by constricting blood vessels and blocking pain pathways. CGRP inhibitors such as erenumab represent a breakthrough in migraine prevention by targeting the calcitonin gene-related peptide pathway. Beta-blockers like propranolol and anticonvulsants such as topiramate are also effective preventive options. The choice of medication depends on migraine frequency, severity, comorbid conditions, and individual response patterns.",
+        link: "/health-conditions/migraine/blogs/migraine-medications-guide"
     },
     {
       id: 2,
@@ -78,6 +80,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Trigger Management",
       fullContent:
         "Migraine triggers vary significantly between individuals, but common ones include stress, hormonal fluctuations (especially in women), certain foods like aged cheese and processed meats, weather changes, irregular sleep patterns, bright lights, and strong odors. Keeping a detailed migraine diary helps identify personal triggers. The 'threshold theory' suggests that multiple triggers may need to combine to precipitate a migraine. Stress management through relaxation techniques, regular sleep schedules, staying hydrated, and avoiding known dietary triggers are key prevention strategies. Weather-related triggers are harder to avoid but can be anticipated with weather tracking apps.",
+        link: "/health-conditions/migraine/blogs/migraine-triggers"
     },
     {
       id: 3,
@@ -85,11 +88,12 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       description:
         "Real experiences from chronic migraine patients sharing their journey through diagnosis, treatment trials, workplace accommodations, family relationships, and finding effective management strategies that work...",
       image:
-        "https://images.unsplash.com/photo-1584467735871-8b5b0b3c8d6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://domf5oio6qrcr.cloudfront.net/medialibrary/11169/f1325894-063e-459e-b78d-b5138cd73d18.jpg",
       readTime: "15 min read",
       category: "Patient Stories",
       fullContent:
         "Chronic migraine, defined as 15 or more headache days per month with at least 8 being migraines, affects millions worldwide. Patients often describe the journey as challenging, involving multiple doctor visits, medication trials, and lifestyle adjustments. Sarah, a 34-year-old teacher, found success with a combination of CGRP inhibitors and stress management. Mark, a software developer, discovered that blue light filters and ergonomic workspace changes significantly reduced his attack frequency. Many patients emphasize the importance of family support, workplace understanding, and connecting with migraine communities for emotional support and practical advice.",
+        link: "/health-conditions/migraine/blogs/chronic-migraine"
     },
     {
       id: 4,
@@ -102,6 +106,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Medical Science",
       fullContent:
         "Modern migraine research has revealed that migraines are complex neurological disorders involving multiple brain systems. The trigeminal nerve system plays a crucial role, releasing inflammatory substances that cause blood vessel dilation and pain. CGRP (calcitonin gene-related peptide) is a key player in this process, which is why CGRP inhibitors are so effective. Cortical spreading depression, a wave of electrical activity across the brain, is thought to trigger the aura phase. Genetic factors contribute significantly, with over 40 genetic variants associated with migraine susceptibility. Serotonin imbalances also play a role, explaining why some antidepressants help prevent migraines.",
+        link: "/health-conditions/migraine/blogs/migraine-science"
     },
     {
       id: 5,
@@ -114,6 +119,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Nutrition Guide",
       fullContent:
         "Diet plays a significant role in migraine management. Common food triggers include aged cheeses (high in tyramine), processed meats with nitrates, chocolate, alcohol (especially red wine), artificial sweeteners like aspartame, and MSG. However, triggers are highly individual. Beneficial foods include those rich in magnesium (leafy greens, nuts, seeds), riboflavin/B2 (dairy, eggs, lean meats), and omega-3 fatty acids (fatty fish, walnuts). Regular meal timing is crucial as skipping meals can trigger migraines. Staying well-hydrated is essential, as dehydration is a common trigger. The elimination diet approach can help identify personal food triggers systematically.",
+        link: "/health-conditions/migraine/blogs/migraine-nutrition"
     },
     {
       id: 6,
@@ -126,6 +132,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Alternative Medicine",
       fullContent:
         "Several complementary therapies have strong evidence for migraine prevention. Acupuncture has been shown in multiple studies to reduce migraine frequency when performed by qualified practitioners. Biofeedback and relaxation training help patients control physiological responses to stress. Cognitive behavioral therapy (CBT) addresses the psychological aspects of chronic pain. Supplements with good evidence include magnesium (400-600mg daily), riboflavin (400mg daily), and Coenzyme Q10 (100-300mg daily). Butterbur extract was effective but safety concerns have limited its use. Regular aerobic exercise, yoga, and meditation also show benefits for migraine prevention.",
+        link: "/health-conditions/migraine/blogs/migraine-therapies"
     },
   ]
 
@@ -141,6 +148,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Early Detection",
       fullContent:
         "Migraine attacks often begin with a prodrome phase that can occur 1-2 days before the headache. Symptoms include mood changes (irritability, depression, euphoria), food cravings (especially for chocolate or carbohydrates), increased urination, neck stiffness, and fatigue. About 25% of migraine sufferers experience aura, which typically occurs 20-60 minutes before the headache. Visual auras are most common, including zigzag lines, blind spots, or flashing lights. Some people experience sensory auras (tingling, numbness) or speech difficulties. Recognizing these early signs allows for prompt treatment with acute medications, which are most effective when taken early in the attack.",
+        link: "/health-conditions/migraine/blogs/migraine-early-warning"
     },
     {
       id: 8,
@@ -153,6 +161,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Women's Health",
       fullContent:
         "Hormonal fluctuations significantly impact migraine patterns in women. Menstrual migraines occur in the days before, during, or after menstruation due to estrogen withdrawal. These migraines are often more severe and longer-lasting than non-menstrual attacks. Treatment options include short-term prevention with triptans or NSAIDs around menstruation, or continuous hormonal contraception to minimize fluctuations. During pregnancy, many women experience improvement in migraines, especially in the second and third trimesters, but treatment options are limited. Menopause can initially worsen migraines due to erratic hormone levels, but they often improve post-menopause. Hormone replacement therapy effects vary and should be carefully monitored.",
+        link: "/health-conditions/migraine/blogs/hormonal-migraines"
     },
     {
       id: 9,
@@ -165,6 +174,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Pediatric Care",
       fullContent:
         "Pediatric migraines often differ from adult presentations. Children's migraines are typically shorter (1-4 hours vs. 4-72 hours in adults), more likely to be bilateral, and often accompanied by prominent nausea and vomiting. Abdominal migraines are unique to children, presenting as recurrent abdominal pain without headache. Triggers in children commonly include stress, irregular sleep, skipped meals, and dehydration. Treatment focuses on lifestyle modifications first: regular sleep schedules, consistent meal times, stress management, and adequate hydration. Medications are used more cautiously, with ibuprofen and nasal sumatriptan approved for pediatric use. School accommodations may include quiet spaces for rest, flexible scheduling, and understanding from teachers about migraine-related absences.",
+        link: "/health-conditions/migraine/blogs/pediatric-migraine-guide"
     },
     {
       id: 10,
@@ -177,6 +187,7 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
       category: "Healthcare Team",
       fullContent:
         "Effective migraine management often requires a multidisciplinary approach. Primary care physicians can manage straightforward cases, but complex or frequent migraines benefit from specialist care. Neurologists and certified headache specialists have advanced training in migraine treatment and access to newer therapies. Pain management specialists can help with interventional procedures like nerve blocks. Mental health professionals address the psychological aspects of chronic pain, including depression and anxiety that commonly accompany migraines. Pharmacists can help optimize medication regimens and identify drug interactions. Support groups, both in-person and online, provide emotional support and practical advice from others who understand the migraine experience.",
+        link: "/health-conditions/migraine/blogs/migraine-management-team"
     },
   ]
 
@@ -614,9 +625,11 @@ export default function ComprehensiveMigrainerNewsletterLayout() {
                   <Users className="w-4 h-4 mr-1" />
                   <span>Medically reviewed by headache specialists</span>
                 </div>
+                <Link to={selectedArticle.link || "#"}>
                 <button className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Read Full Article
                 </button>
+                </Link>
               </div>
             </div>
           </div>

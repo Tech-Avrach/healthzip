@@ -114,6 +114,16 @@ import DigitalMigrainePrevention from '@/pages/Migraine/Blog/Blog5';
 import MigraineTreatmentOptions from '@/pages/Migraine/Blog/Blog7';
 import MigraineAssessmentGuide from '@/pages/Migraine/Blog/Blog6';
 import NeurologistConsultationGuide from '@/pages/Migraine/Blog/Blog8';
+import MigraineMedicationsGuide from '@/pages/Migraine/Blog/Blog9';
+import MigraineTriggersGuide from '@/pages/Migraine/Blog/Blog10';
+import ChronicMigraineGuide from '@/pages/Migraine/Blog/Blog11';
+import MigraineScienceGuide from '@/pages/Migraine/Blog/Blog12';
+import MigraineNutritionGuide from '@/pages/Migraine/Blog/Blog13';
+import MigraineTherapiesGuide from '@/pages/Migraine/Blog/Blog14';
+import MigraineEarlyWarningGuide from '@/pages/Migraine/Blog/Blog15';
+import PediatricMigraineGuide from '@/pages/Migraine/Blog/Blog17';
+import MigraineManagementTeamGuide from '@/pages/Migraine/Blog/Blog18';
+import HormonalMigrainesGuide from '@/pages/Migraine/Blog/Blog16';
 
 
 
@@ -392,6 +402,32 @@ EyeExaminationsGuide
 <Route path="/health-conditions/migraine/blogs/migraine-treatment-options" element={<MigraineTreatmentOptions />} />
 
 <Route path="/health-conditions/migraine/blogs/neurologist-consultation-guide" element={<NeurologistConsultationGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-medications-guide" element={<MigraineMedicationsGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-triggers" element={<MigraineTriggersGuide />} />
+ChronicMigraineGuide
+
+<Route path="/health-conditions/migraine/blogs/chronic-migraine" element={<ChronicMigraineGuide />} />
+
+
+<Route path="/health-conditions/migraine/blogs/migraine-science" element={<MigraineScienceGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-nutrition" element={<MigraineNutritionGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/migraine-therapies" element={<MigraineTherapiesGuide />} />
+
+
+<Route path="/health-conditions/migraine/blogs/migraine-early-warning" element={<MigraineEarlyWarningGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/hormonal-migraines" element={<HormonalMigrainesGuide />} />
+
+<Route path="/health-conditions/migraine/blogs/pediatric-migraine-guide" element={<PediatricMigraineGuide />} />
+
+
+<Route path="/health-conditions/migraine/blogs/migraine-management-team" element={<MigraineManagementTeamGuide />} />
+
+
     </Routes>
     </>
   );
