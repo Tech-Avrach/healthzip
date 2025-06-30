@@ -138,6 +138,20 @@ import WelcomeToHealthlineRecipes from '@/pages/wellness/Recipes/Blog/Blog1';
 import HealthyRecipesGuide from '@/pages/wellness/Recipes/Blog/Blog2';
 import MealPrepGuideBeginners from '@/pages/wellness/Recipes/Blog/Blog4';
 import AntiInflammatoryRecipesGuide from '@/pages/wellness/Recipes/Blog/Blog3';
+import SexualHealthEditorLetter from '@/pages/wellness/SexualHealth/Blog/Blog1';
+import SexualWellnessGuide from '@/pages/wellness/SexualHealth/Blog/Blog2';
+import SexualHealthGuide from '@/pages/wellness/SexualHealth/Blog/Blog3';
+import CommunicationAndIntimacyGuide from '@/pages/wellness/SexualHealth/Blog/Blog4';
+import UnderstandingSexualHealth from '@/pages/wellness/SexualHealth/Blog/Blog5';
+import HealthcareQuestionsGuide from '@/pages/wellness/SexualHealth/Blog/Blog6';
+import PatientSexualWellnessJourney from '@/pages/wellness/SexualHealth/Blog/Blog7';
+import ManagingSexualHealth from '@/pages/wellness/SexualHealth/Blog/Blog8';
+import SexualHealthSupportNetwork from '@/pages/wellness/SexualHealth/Blog/Blog9';
+import SexualHealthMentalWellnessGuide from '@/pages/wellness/SexualHealth/Blog/Blog10';
+import SexualHealthScienceGuide from '@/pages/wellness/SexualHealth/Blog/Blog11';
+import SexualHealthProductsGuide from '@/pages/wellness/SexualHealth/Blog/Blog12';
+import CommunicationSkillsGuide from '@/pages/wellness/SexualHealth/Blog/Blog13';
+import SexualHealthSafetyGuide from '@/pages/wellness/SexualHealth/Blog/Blog14';
 
 
 
@@ -475,6 +489,39 @@ ChronicMigraineGuide
 <Route path="/wellness/recipes/blogs/flavor-building-guide" element={<FlavorBuildingGuide />} />
 
 <Route path="/wellness/recipes/blogs/food-safety" element={<FoodSafetyGuide />} />
+
+
+
+
+<Route path="wellness/sexual-health/blogs/sexual-health-editor-letter" element={<SexualHealthEditorLetter/>} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-wellness-guide" element={<SexualWellnessGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-guide" element={<SexualHealthGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/communication-and-intimacy-guide" element={<CommunicationAndIntimacyGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/understanding-sexual-health" element={<UnderstandingSexualHealth />} />
+
+<Route path="/wellness/sexual-health/blogs/healthcare-questions-guide" element={<HealthcareQuestionsGuide />} />
+
+
+<Route path="/wellness/sexual-health/blogs/patient-sexual-wellness-journey" element={<PatientSexualWellnessJourney />} />
+
+
+<Route path="/wellness/sexual-health/blogs/managing-sexual-health" element={<ManagingSexualHealth />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-support-network" element={<SexualHealthSupportNetwork />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-mental-wellness-guide" element={<SexualHealthMentalWellnessGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-science-guide" element={<SexualHealthScienceGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-products-guide" element={<SexualHealthProductsGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/communication-skills" element={<CommunicationSkillsGuide />} />
+
+<Route path="/wellness/sexual-health/blogs/sexual-health-safety-guide" element={<SexualHealthSafetyGuide />} />
     </Routes>
     </>
   );

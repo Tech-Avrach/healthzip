@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Heart, Share2, BookOpen, Clock, X } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const HealthlineSexualHealthPage = () => {
   const [selectedArticle, setSelectedArticle] = useState(null)
@@ -32,6 +33,7 @@ const HealthlineSexualHealthPage = () => {
       category: "Sexual Wellness",
       readTime: "8 min read",
       difficulty: "All Levels",
+      link: "/wellness/sexual-health/blogs/sexual-wellness-guide"
     },
     {
       id: 2,
@@ -41,6 +43,7 @@ const HealthlineSexualHealthPage = () => {
       category: "Education",
       readTime: "6 min read",
       difficulty: "Beginner",
+      link: "/wellness/sexual-health/blogs/sexual-health-guide"
     },
     {
       id: 3,
@@ -50,6 +53,7 @@ const HealthlineSexualHealthPage = () => {
       category: "Relationships",
       readTime: "12 min read",
       difficulty: "All Levels",
+      link: "/wellness/sexual-health/blogs/communication-and-intimacy-guide"
     },
   ]
 
@@ -170,6 +174,7 @@ const HealthlineSexualHealthPage = () => {
                   category: "Editorial",
                   readTime: "5 min read",
                   difficulty: "All Levels",
+                  link: "/wellness/sexual-health/blogs/sexual-health-editor-letter"
                 })
               }
             >
@@ -186,9 +191,8 @@ const HealthlineSexualHealthPage = () => {
                       e.stopPropagation()
                       toggleLike("main")
                     }}
-                    className={`p-2 rounded-full transition-all duration-300 ${
-                      likedArticles.has("main") ? "bg-red-500 text-white" : "bg-white text-gray-600"
-                    }`}
+                    className={`p-2 rounded-full transition-all duration-300 ${likedArticles.has("main") ? "bg-red-500 text-white" : "bg-white text-gray-600"
+                      }`}
                   >
                     <Heart size={20} fill={likedArticles.has("main") ? "white" : "none"} />
                   </button>
@@ -231,9 +235,8 @@ const HealthlineSexualHealthPage = () => {
                             e.stopPropagation()
                             toggleLike(article.id)
                           }}
-                          className={`p-2 rounded-full transition-all duration-300 ${
-                            likedArticles.has(article.id) ? "bg-red-100 text-red-500" : "bg-gray-100 text-gray-400"
-                          }`}
+                          className={`p-2 rounded-full transition-all duration-300 ${likedArticles.has(article.id) ? "bg-red-100 text-red-500" : "bg-gray-100 text-gray-400"
+                            }`}
                         >
                           <Heart size={16} fill={likedArticles.has(article.id) ? "currentColor" : "none"} />
                         </button>
@@ -277,17 +280,18 @@ const HealthlineSexualHealthPage = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="flex gap-4">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
-                  <BookOpen size={18} />
-                  Read Full Article
-                </button>
+                <Link to={selectedArticle.link || "#"} >
+                  <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
+                    <BookOpen size={18} />
+                    Read Full Article
+                  </button>
+                </Link>
                 <button
                   onClick={() => toggleLike(selectedArticle.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                    likedArticles.has(selectedArticle.id)
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${likedArticles.has(selectedArticle.id)
                       ? "bg-red-100 text-red-600 hover:bg-red-200"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
+                    }`}
                 >
                   <Heart size={18} fill={likedArticles.has(selectedArticle.id) ? "currentColor" : "none"} />
                   {likedArticles.has(selectedArticle.id) ? "Liked" : "Like"}
