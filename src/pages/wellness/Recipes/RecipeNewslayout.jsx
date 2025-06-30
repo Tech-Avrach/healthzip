@@ -58,7 +58,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Explore comprehensive cooking options including 30-minute meals, slow cooker recipes, baking fundamentals, meal prep dishes, and emerging cooking methods for optimal nutrition and flavor...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrlwQiHIHGvNv6X4IkijYTCWMifwMgJPLaQ&s",
       readTime: "8 min read",
       category: "Cooking Guide",
     },
@@ -78,7 +78,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Real experiences and practical advice from home cooks on building sustainable cooking habits, mastering new techniques, and maintaining motivation throughout their culinary journey...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://k-c-a.co.uk/wp-content/uploads/2023/12/kitchen-renovation-transformations-by-KCA-Berkshire.jpg",
       readTime: "10 min read",
       category: "Success Story",
     },
@@ -98,7 +98,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Discover how to create a strong support system with cooking instructors, fellow food enthusiasts, nutritionists, and community resources for your cooking journey...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://krghospitality.com/wp-content/uploads/2024/07/MicrosoftDesigner_AIGeneratedImage_ChefLeadingATeamMeeting.jpeg",
       readTime: "5 min read",
       category: "Support Resources",
     },
@@ -121,7 +121,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Learn about protein denaturation, caramelization, Maillard reactions, and how scientific principles support cooking techniques that enhance flavor and nutrition...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-sHKwnlYP2In_SPebdQ3Nc1CkL0h4fBP3kA&s",
       readTime: "7 min read",
       category: "Food Science",
     },
@@ -131,7 +131,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Explore equipment quality factors, safety certifications, proper maintenance, and industry standards that ensure you're getting effective, safe kitchen tools...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://res.cloudinary.com/jerrick/image/upload/v1731042328/672d9c1801f945001d49c2ae.jpg",
       readTime: "8 min read",
       category: "Equipment Guide",
     },
@@ -141,7 +141,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Learn to layer flavors based on your taste preferences, cooking goals, ingredient types, and cultural techniques for consistently delicious results...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurBFs02wXJRtLvu_ZBZuyf0UgS_fE78w8tA&s",
       readTime: "6 min read",
       category: "Technique Guide",
     },
@@ -151,7 +151,7 @@ export default function RecipesNewsletterLayout() {
       description:
         "Navigate proper food handling techniques, storage protocols, and safety considerations to prevent foodborne illness and maintain ingredient quality...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://safetyculture.com/_next/image/?url=https%3A%2F%2Fwp-website.safetyculture.com%2Fwp-content%2Fuploads%2Fsites%2F3%2F2021%2F06%2Ffood-handling-practices.png&w=1920&q=75",
       readTime: "9 min read",
       category: "Safety Guide",
     },
