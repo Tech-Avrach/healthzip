@@ -17,6 +17,7 @@ import {
   FileText,
   Moon,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function SleepHealthNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Sleep Science",
+      link: "/wellness/sleep-health/blogs/sleep-science-guide"
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1586368939344-48171a53d386?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Medical Guidance",
+      link: "/wellness/sleep-health/blogs/sleep-specialist-questions-guide"
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1520206183501-b80df61043c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
       category: "Success Story",
+      link: "/wellness/sleep-health/blogs/sleep-transformation-journey"
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Routine Guide",
+      link: "/wellness/sleep-health/blogs/sleep-routine-guide"
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
+      link: "/wellness/sleep-health/blogs/sleep-health-support-network"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1518911710364-17ec553bde5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Wellness Guide",
+      link: "/wellness/sleep-health/blogs/sleep-and-wellness-guide"
     },
   ]
 
@@ -124,6 +131,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Sleep Science",
+      link: "/wellness/sleep-health/blogs/sleep-science-guide"
     },
     {
       id: 8,
@@ -134,6 +142,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1586368939344-48171a53d386?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Product Guide",
+      link: "/wellness/sleep-health/blogs/sleep-products-guide"
     },
     {
       id: 9,
@@ -144,6 +153,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1520206183501-b80df61043c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Technique Guide",
+      link: "/wellness/sleep-health/blogs/sleep-layering-guide"
     },
     {
       id: 10,
@@ -154,6 +164,7 @@ export default function SleepHealthNewsletterLayout() {
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Safety Guide",
+      link: "/wellness/sleep-health/blogs/sleep-safety"
     },
   ]
 
@@ -548,9 +559,11 @@ export default function SleepHealthNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
+                <Link to={selectedArticle.link || '#'}>
                 <button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
               </div>
             </div>
           </div>

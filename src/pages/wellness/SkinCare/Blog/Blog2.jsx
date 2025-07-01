@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { User, Calendar, Check, Heart, Star, Moon, Sun, Droplet, Shield, Zap, AlertCircle } from "lucide-react"
 
-export default function SkincareRoutineGuide() {
+export default function EssentialSkincareRoutines() {
     const [email, setEmail] = useState("")
     const [activeTab, setActiveTab] = useState("Basics")
 

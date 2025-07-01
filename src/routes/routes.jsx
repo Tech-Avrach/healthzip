@@ -152,6 +152,34 @@ import SexualHealthScienceGuide from '@/pages/wellness/SexualHealth/Blog/Blog11'
 import SexualHealthProductsGuide from '@/pages/wellness/SexualHealth/Blog/Blog12';
 import CommunicationSkillsGuide from '@/pages/wellness/SexualHealth/Blog/Blog13';
 import SexualHealthSafetyGuide from '@/pages/wellness/SexualHealth/Blog/Blog14';
+import SkincareTypesGuide from '@/pages/wellness/SkinCare/Blog/Blog5';
+import SkincareEditorial from '@/pages/wellness/SkinCare/Blog/Blog1';
+import EssentialSkincareRoutines from '@/pages/wellness/SkinCare/Blog/Blog2';
+import AntiAgingSkincareGuide from '@/pages/wellness/SkinCare/Blog/Blog3';
+import BuildingYourSkincareRoutine from '@/pages/wellness/SkinCare/Blog/Blog4';
+import SkincareRoutineGuide from '@/pages/wellness/SkinCare/Blog/Blog8';
+import SkincareSupportNetworkGuide from '@/pages/wellness/SkinCare/Blog/Blog9';
+import SkincareWellnessGuide from '@/pages/wellness/SkinCare/Blog/Blog10';
+import SkincareScienceGuide from '@/pages/wellness/SkinCare/Blog/Blog11';
+import SkincareProductGuide from '@/pages/wellness/SkinCare/Blog/Blog12';
+import SkincareLayeringGuide from '@/pages/wellness/SkinCare/Blog/Blog13';
+import SkinSafetyGuide from '@/pages/wellness/SkinCare/Blog/Blog14';
+import DermatologistQuestionsGuide from '@/pages/wellness/SkinCare/Blog/Blog6';
+import SkincareJourney from '@/pages/wellness/SkinCare/Blog/Blog7';
+import SleepHealthEditorial from '@/pages/wellness/SleepHealth/Blog/Blog1';
+import SleepHealthGuide from '@/pages/wellness/SleepHealth/Blog/Blog2';
+import SleepPromotingFoodsGuide from '@/pages/wellness/SleepHealth/Blog/Blog3';
+import SleepHygieneGuide from '@/pages/wellness/SleepHealth/Blog/Blog4';
+import SleepScienceGuide from '@/pages/wellness/SleepHealth/Blog/Blog5';
+import SleepSpecialistQuestionsGuide from '@/pages/wellness/SleepHealth/Blog/Blog6';
+import SleepTransformationJourney from '@/pages/wellness/SleepHealth/Blog/Blog7';
+import SleepRoutineGuide from '@/pages/wellness/SleepHealth/Blog/Blog8';
+import SleepHealthSupportNetwork from '@/pages/wellness/SleepHealth/Blog/Blog9';
+import SleepAndWellnessGuide from '@/pages/wellness/SleepHealth/Blog/Blog10';
+import SleepProductsGuide from '@/pages/wellness/SleepHealth/Blog/Blog12';
+import SleepLayeringGuide from '@/pages/wellness/SleepHealth/Blog/Blog13';
+import SleepSafetyGuide from '@/pages/wellness/SleepHealth/Blog/Blog14';
+
 
 
 
@@ -173,6 +201,7 @@ const AllRoutes = () => {
         <Route path="/wellness/recipes" element={<Recipes />} />
         <Route path="/wellness/sexual-health" element={<SexualHealth />} />
         <Route path="/wellness/skin-care" element={<SkinCare />} />
+        <Route path="/wellness/sleep-health" element={<SleepHealth />} />
         <Route path="/featured/healthy-lifestyle-tips" element={<Healthylifestyle />} />
         <Route path="/featured/longevity-tips" element={<Longerlife />} />
         <Route path="/featured/daily-health-tips" element={<Lifestyle />} />
@@ -522,7 +551,78 @@ ChronicMigraineGuide
 <Route path="/wellness/sexual-health/blogs/communication-skills" element={<CommunicationSkillsGuide />} />
 
 <Route path="/wellness/sexual-health/blogs/sexual-health-safety-guide" element={<SexualHealthSafetyGuide />} />
+
+
+<Route path="/wellness/skin-care/blogs/skincare-editorial" element={<SkincareEditorial />} />
+
+<Route path="/wellness/skin-care/blogs/essential-skincare-routines" element={<EssentialSkincareRoutines />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-types-guide" element={<SkincareTypesGuide />} />
+
+
+<Route path="/wellness/skin-care/blogs/building-your-skincare-routine" element={<BuildingYourSkincareRoutine />} />
+
+<Route path="/wellness/skin-care/blogs/anti-aging-skincare" element={<AntiAgingSkincareGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-routine-guide" element={<SkincareRoutineGuide />} />
+
+
+<Route path="/wellness/skin-care/blogs/skincare-support-network" element={<SkincareSupportNetworkGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-wellness-guide" element={<SkincareWellnessGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-science-guide" element={<SkincareScienceGuide />} />
+
+
+<Route path="/wellness/skin-care/blogs/skincare-products-guide" element={<SkincareProductGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-layering-guide" element={<SkincareLayeringGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skin-safety" element={<SkinSafetyGuide />} />
+
+<Route path="/wellness/skin-care/blogs/dermatologist-questions-guide" element={<DermatologistQuestionsGuide />} />
+
+<Route path="/wellness/skin-care/blogs/skincare-journey" element={<SkincareJourney />} />
+
+
+
+
+
+<Route path="/wellness/sleep-health/blogs/sleep-health-editorial" element={<SleepHealthEditorial />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-habits-guide" element={<SleepHealthGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-promoting-foods-guide" element={<SleepPromotingFoodsGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-hygiene-guide" element={<SleepHygieneGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-science-guide" element={<SleepScienceGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-specialist-questions-guide" element={<SleepSpecialistQuestionsGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-transformation-journey" element={<SleepTransformationJourney />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-routine-guide" element={<SleepRoutineGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-health-support-network" element={<SleepHealthSupportNetwork />} />
+
+ <Route path="/wellness/sleep-health/blogs/sleep-and-wellness-guide" element={<SleepAndWellnessGuide />} />
+
+
+ <Route path="/wellness/sleep-health/blogs/sleep-science-guide" element={<SleepScienceGuide />} />
+
+<Route path="/wellness/sleep-health/blogs/sleep-products-guide" element={<SleepProductsGuide />} />
+SleepLayeringGuide
+
+<Route path="/wellness/sleep-health/blogs/sleep-layering-guide" element={<SleepLayeringGuide />} />
+
+
+<Route path="/wellness/sleep-health/blogs/sleep-safety" element={<SleepSafetyGuide />} />
+
+
+
     </Routes>
+    
     </>
   );
 };

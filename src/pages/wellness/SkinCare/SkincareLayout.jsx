@@ -17,6 +17,7 @@ import {
   FileText,
   Sparkles,
 } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function SkincareNewsletterLayout() {
   const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Skincare Guide",
+      link: "/wellness/skin-care/blogs/skincare-types-guide"
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Dermatology Guidance",
+      link: "/wellness/skin-care/blogs/dermatologist-questions-guide"
     },
     {
       id: 3,
@@ -81,6 +84,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
       category: "Success Story",
+      link: "/wellness/skin-care/blogs/skincare-journey"
     },
     {
       id: 4,
@@ -91,6 +95,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Routine Guide",
+      link : "/wellness/skin-care/blogs/skincare-routine-guide"
     },
     {
       id: 5,
@@ -101,6 +106,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
+      link : "/wellness/skin-care/blogs/skincare-support-network"
     },
     {
       id: 6,
@@ -111,6 +117,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Wellness Guide",
+      link: "/wellness/skin-care/blogs/skincare-wellness-guide"
     },
   ]
 
@@ -124,6 +131,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
       category: "Skin Science",
+      link: "/wellness/skin-care/blogs/skincare-science-guide"
     },
     {
       id: 8,
@@ -134,6 +142,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
       category: "Product Guide",
+      link: "/wellness/skin-care/blogs/skincare-products-guide"
     },
     {
       id: 9,
@@ -144,6 +153,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
       category: "Technique Guide",
+      link: "/wellness/skin-care/blogs/skincare-layering-guide"
     },
     {
       id: 10,
@@ -154,6 +164,7 @@ export default function SkincareNewsletterLayout() {
         "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Safety Guide",
+      link: "/wellness/skin-care/blogs/skin-safety"
     },
   ]
 
@@ -548,9 +559,11 @@ export default function SkincareNewsletterLayout() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">{selectedArticle.title}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">{selectedArticle.description}</p>
               <div className="border-t pt-6">
+                <Link to={selectedArticle.link || "#"}>
                 <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Continue Reading
                 </button>
+                </Link>
               </div>
             </div>
           </div>
