@@ -86,7 +86,6 @@ import Recipes from '@/pages/wellness/Recipes/Recipes';
 import SexualHealth from '@/pages/wellness/SexualHealth/SexualHealth';
 import SkinCare from '@/pages/wellness/SkinCare/SkinCare';
 import SleepHealth from '@/pages/wellness/SleepHealth/SleepHealth';
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MentalHealthGuide from '../pages/MentalHealth/Blogs/Blog1';
 import MentalHealthTeamGuide from '@/pages/MentalHealth/Blogs/Blog2';
