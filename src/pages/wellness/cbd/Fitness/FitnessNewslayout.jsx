@@ -15,10 +15,10 @@ import {
   Instagram,
   Youtube,
   FileText,
-  Leaf,
+  Dumbbell,
 } from "lucide-react";
 
-export default function CBDNewsletterLayout() {
+export default function FitnessNewsletterLayout() {
   const [email, setEmail] = useState("");
   const [footerEmail, setFooterEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
@@ -51,119 +51,119 @@ export default function CBDNewsletterLayout() {
     setTimeout(() => setShowSuccessMessage(false), 3000);
   };
 
-  const treatments = [
+  const workoutArticles = [
     {
       id: 1,
-      title: "Understanding CBD Products: Oils, Edibles, Topicals, and More",
+      title: "Understanding Workout Types: Strength, Cardio, HIIT, and More",
       description:
-        "Explore comprehensive CBD product options including tinctures, capsules, gummies, topical creams, and emerging delivery methods for optimal wellness benefits...",
+        "Explore comprehensive workout options including strength training, cardiovascular exercise, high-intensity interval training, flexibility work, and emerging fitness methods for optimal health benefits...",
       image:
-        "https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
-      category: "Product Guide",
-      Link: "/wellness/cbd/Understanding-CBD-Products:-Oils-Edibles-Topicals-and-More",
+      category: "Workout Guide",
+      link: "/wellness/Fitness/Understanding-Workout-Types",
     },
     {
       id: 2,
-      title: "Essential Questions to Ask Your CBD Retailer",
+      title: "Essential Questions to Ask Your Personal Trainer",
       description:
-        "Prepare for your CBD shopping experience with this comprehensive list of important questions about sourcing, testing, dosage, and product quality...",
+        "Prepare for your fitness journey with this comprehensive list of important questions about training philosophy, certifications, experience, and program customization...",
       image:
-        "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
-      category: "Consumer Guidance",
-      Link: "/wellness/cbd/Essential-Questions-to-Ask-Your-CBD-Retailer",
+      category: "Trainer Guidance",
+      link: "/wellness/Fitness/Essential-Questions-to-Ask-Your-Personal-Trainer",
     },
     {
       id: 3,
-      title: "Real CBD Experiences: A User's Journey",
+      title: "Real Fitness Transformations: A Member's Journey",
       description:
-        "Real experiences and practical advice from CBD users on managing wellness routines, finding the right products, and maintaining quality of life with natural solutions...",
+        "Real experiences and practical advice from fitness enthusiasts on building sustainable routines, overcoming plateaus, and maintaining motivation throughout their transformation journey...",
       image:
-        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "10 min read",
-      category: "User Story",
-      Link: "/wellness/cbd/Real-CBD-Experiences:-A-Users-Journey",
+      category: "Success Story",
+      link: "/wellness/Fitness/Real-Fitness-Transformations",
     },
     {
       id: 4,
-      title: "Managing Stress and Sleep with CBD in Modern Life",
+      title: "Managing Stress and Recovery in Modern Fitness",
       description:
-        "Learn effective strategies for incorporating CBD into your wellness routine including timing, dosage, product selection, and lifestyle integration...",
+        "Learn effective strategies for incorporating recovery into your fitness routine including sleep optimization, stress management, active recovery, and lifestyle integration...",
       image:
         "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
-      category: "Wellness Guide",
-      Link: "/wellness/cbd/Managing-Stress-and-Sleep-with-CBD-in-Modern-Life",
+      category: "Recovery Guide",
+      link: "/wellness/Fitness/Managing-Stress-and-Recovery-in-Modern-Fitness",
     },
     {
       id: 5,
-      title: "Building Your CBD Support Network",
+      title: "Building Your Fitness Support Network",
       description:
-        "Discover how to create a strong support system with healthcare providers, knowledgeable retailers, and community resources for your CBD journey...",
+        "Discover how to create a strong support system with trainers, workout partners, healthcare providers, and community resources for your fitness journey...",
       image:
         "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "5 min read",
       category: "Support Resources",
-      Link: "/wellness/cbd/building-cbd-support-network",
+      link: "/wellness/Fitness/Building-Your-network",
     },
     {
       id: 6,
-      title: "CBD and Nutrition: Maximizing Your Wellness Routine",
+      title: "Fitness and Nutrition: Maximizing Your Performance",
       description:
-        "Essential nutrition guidelines, timing recommendations, and dietary strategies to optimize your CBD experience and support overall wellness...",
+        "Essential nutrition guidelines, meal timing recommendations, and dietary strategies to fuel your workouts and support recovery for optimal fitness results...",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
       category: "Nutrition Guide",
-      Link: "/wellness/cbd/CBD-and-Nutrition:-Maximizing-Your-Wellness-Routine",
+      link: "/wellness/Fitness/Fitness-and-Nutrition",
     },
   ];
 
   const educationArticles = [
     {
       id: 7,
-      title: "The Science Behind CBD: How It Works in Your Body",
+      title: "The Science Behind Exercise: How It Transforms Your Body",
       description:
-        "Learn about the endocannabinoid system, CBD's interaction with receptors, and how scientific research supports CBD's potential wellness benefits...",
+        "Learn about muscle adaptation, cardiovascular improvements, metabolic changes, and how scientific research supports exercise's impact on physical and mental health...",
       image:
         "https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "7 min read",
-      category: "Science",
-      Link: "/wellness/cbd/Science-behind-CBD",
+      category: "Exercise Science",
+      link: "/wellness/Fitness/Science-behind-exercise",
     },
     {
       id: 8,
-      title: "Understanding CBD Quality: Testing, Sourcing, and Standards",
+      title: "Understanding Fitness Equipment: Quality, Safety, and Selection",
       description:
-        "Explore quality factors, third-party testing, organic sourcing, and industry standards that ensure you're getting safe, effective CBD products...",
+        "Explore equipment quality factors, safety certifications, proper maintenance, and industry standards that ensure you're getting effective, safe fitness gear...",
       image:
-        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "8 min read",
-      category: "Quality Assurance",
-      Link: "/wellness/cbd/understanding-cbd-quality",
+      category: "Equipment Guide",
+      link: "/wellness/Fitness/Understanding-Fitness-Equipment:",
     },
     {
       id: 9,
-      title: "CBD Dosage Guidelines: Finding Your Perfect Amount",
+      title: "Progressive Overload: The Key to Continuous Improvement",
       description:
-        "Learn to determine optimal CBD dosing based on your goals, body weight, product type, and individual response patterns...",
+        "Learn to implement progressive overload principles based on your fitness level, goals, exercise type, and individual response patterns for consistent progress...",
       image:
         "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "6 min read",
-      category: "Dosage Guide",
-      Link: "/wellness/cbd/CBD-dosage-guideline",
+      category: "Training Guide",
+      link: "/wellness/Fitness/Progressive-Overload",
     },
     {
       id: 10,
-      title: "Legal Landscape: Understanding CBD Laws and Regulations",
+      title: "Injury Prevention: Understanding Form and Safety",
       description:
-        "Navigate the complex legal environment surrounding CBD including federal regulations, state laws, and compliance considerations for consumers...",
+        "Navigate proper exercise technique, warm-up protocols, and safety considerations to prevent injuries and maintain long-term fitness success...",
       image:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
       readTime: "9 min read",
-      category: "Legal Guide",
-      Link: "/wellness/cbd/Legal-Landscape",
+      category: "Safety Guide",
+      link: "/wellness/Fitness/Injury-Prevention",
     },
   ];
 
@@ -174,11 +174,11 @@ export default function CBDNewsletterLayout() {
       { name: "Privacy Policy", href: "#" },
       { name: "Privacy Settings", href: "#" },
       { name: "Advertising Policy", href: "#" },
-      { name: "CBD Topics", href: "#" },
+      { name: "Fitness Topics", href: "#" },
     ],
     resources: [
       { name: "Sitemap", href: "#" },
-      { name: "Product Reviews", href: "#" },
+      { name: "Equipment Reviews", href: "#" },
       { name: "Content Integrity", href: "#" },
       { name: "Newsletters", href: "#" },
     ],
@@ -187,32 +187,32 @@ export default function CBDNewsletterLayout() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-emerald-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-blue-50"></div>
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-red-200 rounded-full opacity-20 animate-pulse"></div>
         <div
-          className="absolute top-40 right-20 w-16 h-16 bg-emerald-200 rounded-full opacity-30 animate-bounce"
+          className="absolute top-40 right-20 w-16 h-16 bg-blue-200 rounded-full opacity-30 animate-bounce"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-40 left-20 w-12 h-12 bg-lime-200 rounded-full opacity-25 animate-pulse"
+          className="absolute bottom-40 left-20 w-12 h-12 bg-orange-200 rounded-full opacity-25 animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute bottom-20 right-40 w-24 h-24 bg-green-100 rounded-full opacity-20 animate-bounce"
+          className="absolute bottom-20 right-40 w-24 h-24 bg-red-100 rounded-full opacity-20 animate-bounce"
           style={{ animationDelay: "0.5s" }}
         ></div>
         <div
-          className="absolute top-60 left-1/2 w-8 h-8 bg-emerald-300 rounded-full opacity-40 animate-ping"
+          className="absolute top-60 left-1/2 w-8 h-8 bg-blue-300 rounded-full opacity-40 animate-ping"
           style={{ animationDelay: "3s" }}
         ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8">
         {/* Header Newsletter Section */}
-        <div className="bg-gradient-to-r from-green-600 to-emerald-500 rounded-3xl p-8 mb-12 relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300">
+        <div className="bg-gradient-to-r from-red-600 to-blue-500 rounded-3xl p-8 mb-12 relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300">
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full transform translate-x-32 -translate-y-32 animate-pulse"></div>
@@ -225,15 +225,15 @@ export default function CBDNewsletterLayout() {
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div className="text-white">
               <div className="flex items-center mb-4 animate-fadeIn">
-                <Leaf className="w-8 h-8 mr-3 text-lime-300 animate-pulse" />
+                <Dumbbell className="w-8 h-8 mr-3 text-orange-300 animate-pulse" />
                 <h1 className="text-4xl font-bold">
-                  Get Our Weekly CBD Newsletter
+                  Get Our Weekly Fitness Newsletter
                 </h1>
               </div>
-              <p className="text-green-100 mb-6 text-lg leading-relaxed">
-                Join over 150K subscribers in receiving expert guidance on CBD
-                products, wellness routines, quality standards, and the latest
-                breakthroughs in cannabinoid research.
+              <p className="text-red-100 mb-6 text-lg leading-relaxed">
+                Join over 150K subscribers in receiving expert guidance on
+                workout routines, fitness equipment, training techniques, and
+                the latest breakthroughs in exercise science and performance.
               </p>
 
               <div className="space-y-4">
@@ -244,13 +244,13 @@ export default function CBDNewsletterLayout() {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 rounded-xl text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-green-300 transition-all duration-300 transform hover:scale-105"
+                    className="w-full pl-12 pr-4 py-4 rounded-xl text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-red-300 transition-all duration-300 transform hover:scale-105"
                   />
                 </div>
                 <button
                   onClick={handleSignUp}
                   disabled={isAnimating}
-                  className={`bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                  className={`bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                     isAnimating ? "animate-spin" : ""
                   }`}
                 >
@@ -262,7 +262,7 @@ export default function CBDNewsletterLayout() {
                 </button>
               </div>
 
-              <p className="text-green-200 text-sm mt-4 opacity-75">
+              <p className="text-red-200 text-sm mt-4 opacity-75">
                 Your privacy is important to us
               </p>
             </div>
@@ -273,69 +273,69 @@ export default function CBDNewsletterLayout() {
                 style={{ animationDelay: "0.5s" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-                  alt="CBD products and hemp leaves"
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+                  alt="Fitness equipment and workout scene"
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300"
                   onError={(e) => {
                     e.target.src = "/placeholder.svg?height=300&width=400";
                   }}
                 />
                 <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-bounce">
-                  <Leaf className="w-6 h-6 text-green-500" />
+                  <Dumbbell className="w-6 h-6 text-red-500" />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Treatments Section */}
+        {/* Workouts Section */}
         <div className="mb-16 animate-fadeIn" style={{ animationDelay: "1s" }}>
           <div className="flex items-center mb-8">
             <h2 className="text-3xl font-bold text-gray-800 mr-4">
-              CBD PRODUCTS & WELLNESS
+              WORKOUTS & FITNESS TRAINING
             </h2>
-            <div className="flex-1 h-1 bg-gradient-to-r from-green-300 to-emerald-300 rounded-full"></div>
+            <div className="flex-1 h-1 bg-gradient-to-r from-red-300 to-blue-300 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {treatments.map((treatment, index) => (
+            {workoutArticles.map((article, index) => (
               <div
-                key={treatment.id}
+                key={article.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden animate-slideUp"
                 style={{ animationDelay: `${index * 0.2}s` }}
-                onClick={() => setSelectedArticle(treatment)}
+                onClick={() => setSelectedArticle(article)}
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={treatment.image || "/placeholder.svg"}
-                    alt={treatment.title}
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.target.src = "/placeholder.svg?height=200&width=300";
                     }}
                   />
                   <div className="absolute top-4 left-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                    {treatment.category}
+                    {article.category}
                   </div>
                   <div className="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center">
                     <Clock className="w-4 h-4 mr-1" />
-                    {treatment.readTime}
+                    {article.readTime}
                   </div>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="font-bold text-xl text-gray-800 mb-3 line-clamp-2 group-hover:text-green-600 transition-colors duration-300">
-                    {treatment.title}
+                  <h3 className="font-bold text-xl text-gray-800 mb-3 line-clamp-2 group-hover:text-red-600 transition-colors duration-300">
+                    {article.title}
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
-                    {treatment.description}
+                    {article.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
                       <Users className="w-4 h-4 mr-1" />
                       <span>2.1k readers</span>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ChevronRight className="w-5 h-5 text-red-600 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
               </div>
@@ -349,11 +349,11 @@ export default function CBDNewsletterLayout() {
           style={{ animationDelay: "1.5s" }}
         >
           <div className="flex items-center mb-8">
-            <Shield className="w-8 h-8 text-emerald-600 mr-4 animate-pulse" />
+            <Shield className="w-8 h-8 text-blue-600 mr-4 animate-pulse" />
             <h2 className="text-3xl font-bold text-gray-800 mr-4">
-              EDUCATION & RESEARCH
+              EDUCATION & TRAINING SCIENCE
             </h2>
-            <div className="flex-1 h-1 bg-gradient-to-r from-green-300 to-emerald-300 rounded-full"></div>
+            <div className="flex-1 h-1 bg-gradient-to-r from-red-300 to-blue-300 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -380,7 +380,7 @@ export default function CBDNewsletterLayout() {
                   </div>
 
                   <div className="p-6 flex-1">
-                    <h3 className="font-bold text-lg text-gray-800 mb-3 line-clamp-2 group-hover:text-emerald-600 transition-colors duration-300">
+                    <h3 className="font-bold text-lg text-gray-800 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                       {article.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-2 leading-relaxed text-sm">
@@ -391,7 +391,7 @@ export default function CBDNewsletterLayout() {
                         <Clock className="w-3 h-3 mr-1" />
                         <span>{article.readTime}</span>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-emerald-600 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
                 </div>
@@ -402,14 +402,14 @@ export default function CBDNewsletterLayout() {
 
         {/* Footer Section */}
         <div
-          className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-3xl p-8 shadow-xl animate-fadeIn"
+          className="bg-gradient-to-r from-blue-50 to-red-50 rounded-3xl p-8 shadow-xl animate-fadeIn"
           style={{ animationDelay: "2s" }}
         >
-          {/* CBDline Logo and Social Icons */}
+          {/* FitLine Logo and Social Icons */}
           <div className="flex flex-col md:flex-row justify-between items-start mb-8">
             <div className="mb-6 md:mb-0">
               <h1 className="text-3xl font-bold text-gray-800 mb-4 animate-slideIn">
-                CBDline
+                FitLine
               </h1>
               <div className="flex space-x-4">
                 {[
@@ -435,13 +435,13 @@ export default function CBDNewsletterLayout() {
             {/* Newsletter Signup */}
             <div className="md:col-span-1">
               <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Mail className="w-5 h-5 mr-2 text-emerald-600" />
-                Get our CBD newsletter
+                <Mail className="w-5 h-5 mr-2 text-blue-600" />
+                Get our fitness newsletter
               </h3>
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                Stay informed with trusted CBD information, product reviews,
-                wellness tips, and research updates delivered to your inbox
-                weekly.
+                Stay informed with trusted fitness information, workout
+                routines, equipment reviews, and training tips delivered to your
+                inbox weekly.
               </p>
 
               <div className="flex mb-4">
@@ -450,11 +450,11 @@ export default function CBDNewsletterLayout() {
                   placeholder="Enter your email"
                   value={footerEmail}
                   onChange={(e) => setFooterEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-l-xl border-2 border-green-200 focus:border-green-400 focus:outline-none transition-colors duration-300"
+                  className="flex-1 px-4 py-3 rounded-l-xl border-2 border-red-200 focus:border-red-400 focus:outline-none transition-colors duration-300"
                 />
                 <button
                   onClick={handleFooterSignUp}
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-r-xl font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-r-xl font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   SIGN UP
                 </button>
@@ -462,7 +462,7 @@ export default function CBDNewsletterLayout() {
 
               <p className="text-gray-500 text-xs">
                 Your{" "}
-                <span className="underline cursor-pointer hover:text-emerald-600">
+                <span className="underline cursor-pointer hover:text-blue-600">
                   privacy
                 </span>{" "}
                 is important to us
@@ -481,7 +481,7 @@ export default function CBDNewsletterLayout() {
                     >
                       <a
                         href={link.href}
-                        className="text-gray-600 hover:text-emerald-600 transition-colors duration-300 text-sm hover:underline"
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm hover:underline"
                       >
                         {link.name}
                       </a>
@@ -500,7 +500,7 @@ export default function CBDNewsletterLayout() {
                     >
                       <a
                         href={link.href}
-                        className="text-gray-600 hover:text-emerald-600 transition-colors duration-300 text-sm hover:underline"
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm hover:underline"
                       >
                         {link.name}
                       </a>
@@ -517,13 +517,13 @@ export default function CBDNewsletterLayout() {
               className="text-gray-500 text-xs leading-relaxed animate-fadeIn"
               style={{ animationDelay: "2.5s" }}
             >
-              ©️ 2025 CBDline Media LLC. All rights reserved. CBDline Media is a
-              wellness information company. Our website services, content, and
-              products are for informational purposes only. CBDline Media does
+              ©️ 2025 FitLine Media LLC. All rights reserved. FitLine Media is a
+              fitness information company. Our website services, content, and
+              products are for informational purposes only. FitLine Media does
               not provide medical advice, diagnosis, or treatment.
               <a
                 href="#"
-                className="underline hover:text-emerald-600 transition-colors duration-300 ml-1"
+                className="underline hover:text-blue-600 transition-colors duration-300 ml-1"
               >
                 See additional information
               </a>
@@ -544,10 +544,10 @@ export default function CBDNewsletterLayout() {
 
       {/* Pop-up Notification */}
       {showPopup && (
-        <div className="fixed bottom-6 right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-sm animate-slideIn z-50 border border-emerald-100">
+        <div className="fixed bottom-6 right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-sm animate-slideIn z-50 border border-blue-100">
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center">
-              <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-full p-2 mr-3">
+              <div className="bg-gradient-to-r from-blue-500 to-red-500 rounded-full p-2 mr-3">
                 <Star className="w-5 h-5 text-white" />
               </div>
               <h4 className="font-bold text-gray-800">New Article Alert!</h4>
@@ -560,9 +560,9 @@ export default function CBDNewsletterLayout() {
             </button>
           </div>
           <p className="text-gray-600 text-sm mb-3">
-            "Understanding CBD Products" just published!
+            "Understanding Workout Types" just published!
           </p>
-          <button className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             Read Now
           </button>
         </div>
@@ -590,7 +590,7 @@ export default function CBDNewsletterLayout() {
             </div>
             <div className="p-8">
               <div className="flex items-center mb-4">
-                <span className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+                <span className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
                   {selectedArticle.category}
                 </span>
                 <span className="text-gray-500 text-sm flex items-center">
@@ -605,11 +605,10 @@ export default function CBDNewsletterLayout() {
                 {selectedArticle.description}
               </p>
               <div className="border-t pt-6">
-                <Link
-                  to={selectedArticle.Link}
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block text-center"
-                >
-                  Continue Reading
+                <Link to={selectedArticle.link}>
+                  <button className="bg-gradient-to-r from-red-500 to-blue-600 text-white px-6 py-2 rounded-lg">
+                    Continue Reading
+                  </button>
                 </Link>
               </div>
             </div>

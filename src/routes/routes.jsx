@@ -81,7 +81,7 @@ import FruitVegetableSafetyGuide from '@/pages/recentPost/Blog2';
 import CreativeVegetableWays from '@/pages/recentPost/Blog3';
 import VegetableHeartHealthGuide from '@/pages/recentPost/Blog4';
 import Cbd from '@/pages/wellness/cbd/Cbd';
-import Fitness from '@/pages/wellness/Fitness/Fitness';
+import Fitness from '@/pages/wellness/cbd/Fitness/Fitness';
 import Recipes from '@/pages/wellness/Recipes/Recipes';
 import SexualHealth from '@/pages/wellness/SexualHealth/SexualHealth';
 import SkinCare from '@/pages/wellness/SkinCare/SkinCare';
@@ -180,6 +180,39 @@ import SleepProductsGuide from '@/pages/wellness/SleepHealth/Blog/Blog12';
 import SleepLayeringGuide from '@/pages/wellness/SleepHealth/Blog/Blog13';
 import SleepSafetyGuide from '@/pages/wellness/SleepHealth/Blog/Blog14';
 
+import CbdArticle1 from "@/pages/wellness/cbd/CbdArticles/Blog1"
+import CbdArticle2 from "@/pages/wellness/cbd/CbdArticles/Blog2"
+import CbdArticle3 from "@/pages/wellness/cbd/CbdArticles/Blog3"
+import CbdArticle4 from "@/pages/wellness/cbd/CbdArticles/Blog4"
+import CbdArticle5 from "@/pages/wellness/cbd/CbdArticles/Blog5"
+import CbdArticle6 from "@/pages/wellness/cbd/CbdArticles/Blog6"
+import CbdArticle7 from "@/pages/wellness/cbd/CbdArticles/Blog7"
+import CbdArticle8 from "@/pages/wellness/cbd/CbdArticles/Blog8"
+import CbdArticle9 from "@/pages/wellness/cbd/CbdArticles/Blog9"
+import CbdArticle10 from "@/pages/wellness/cbd/CbdArticles/Blog10"
+import CbdArticle11 from "@/pages/wellness/cbd/CbdArticles/Blog11"
+import CbdArticle12 from "@/pages/wellness/cbd/CbdArticles/Blog12"
+import CbdArticle13 from "@/pages/wellness/cbd/CbdArticles/Blog13"
+import CbdArticle14 from "@/pages/wellness/cbd/CbdArticles/Blog14"
+import CbdArticle15 from "@/pages/wellness/cbd/CbdArticles/Blog15"
+import CbdArticle16 from "@/pages/wellness/cbd/CbdArticles/Blog16"
+
+
+import FitnessArticle1 from '@/pages/wellness/cbd/FitnessArticle/Blog1';
+import FitnessArticle2 from '@/pages/wellness/cbd/FitnessArticle/Blog2';
+import FitnessArticle3 from '@/pages/wellness/cbd/FitnessArticle/Blog3';
+import FitnessArticle4 from '@/pages/wellness/cbd/FitnessArticle/Blog4';
+import FitnessArticle5 from '@/pages/wellness/cbd/FitnessArticle/Blog5';
+import FitnessArticle6 from '@/pages/wellness/cbd/FitnessArticle/Blog6';
+import FitnessArticle7 from '@/pages/wellness/cbd/FitnessArticle/Blog7';
+import FitnessArticle8 from '@/pages/wellness/cbd/FitnessArticle/Blog8';
+import FitnessArticle9 from '@/pages/wellness/cbd/FitnessArticle/Blog9';
+import FitnessArticle10 from '@/pages/wellness/cbd/FitnessArticle/Blog10';
+import FitnessArticle11 from '@/pages/wellness/cbd/FitnessArticle/Blog11';
+import FitnessArticle12 from '@/pages/wellness/cbd/FitnessArticle/Blog12';
+import FitnessArticle13 from '@/pages/wellness/cbd/FitnessArticle/Blog13';
+import FitnessArticle14 from '@/pages/wellness/cbd/FitnessArticle/Blog14';
+
 
 
 
@@ -220,20 +253,16 @@ const AllRoutes = () => {
 
       <Route path="/blog/summer-cold-snacks-guide" element={<SummerColdSnacksGuide />} />
 
-   
       <Route path="/blog/lower-abdominal-pain-guide" element={<LowerAbdominalPainGuide />} />
       
       <Route path="/blog/parleo-dessert-recipes" element={<PaleoDessertRecipes />} />
 
       <Route path="/blog/dairy-free-dessert-recipes" element={<DairyFreeDessertsGuide />} />
 
-      
-
       <Route path="/recent-post/low-carb-vegetables-guide" element={<LowCarbVegetablesGuide />} />
 
       <Route path="/recent-post/fruit-vegetable-safety-guide" element={<FruitVegetableSafetyGuide />} />
       
-
       <Route path="/recent-post/creative-vegetable-ways" element={<CreativeVegetableWays />} />
       
       <Route path="/recent-post/vegetable-heart-health-guide" element={<VegetableHeartHealthGuide />} />
@@ -618,6 +647,41 @@ SleepLayeringGuide
 
 
 <Route path="/wellness/sleep-health/blogs/sleep-safety" element={<SleepSafetyGuide />} />
+
+<Route path="/wellness/cbd/learn-more-about-cbd/Cannabidiol-(CBD):-What-We-Know-and-What-We-Don't" element={< CbdArticle1 />} />
+<Route path="/wellness/cbd/learn-more-about-cbd/What-do-you-know-about-different-types-of-CBD" element={< CbdArticle2 />} />
+<Route path="/wellness/cbd/learn-more-about-cbd/cbd-oil-benefits" element={< CbdArticle3 />} />
+<Route path="/wellness/cbd/how-much-cbd-should-i-take-the-first-time" element={< CbdArticle4 />} />
+<Route path="/wellness/cbd/best-cbd-oil-for-anxiety" element={< CbdArticle5 />} />
+<Route path="/wellness/cbd/cbd-oil-for-pain" element={< CbdArticle6 />} />
+
+<Route path="/wellness/cbd/Understanding-CBD-Products:-Oils-Edibles-Topicals-and-More" element={< CbdArticle7 />} />
+<Route path="/wellness/cbd/Essential-Questions-to-Ask-Your-CBD-Retailer" element={< CbdArticle8 />} />
+<Route path="/wellness/cbd/Real-CBD-Experiences:-A-Users-Journey" element={< CbdArticle9 />} />
+<Route path="/wellness/cbd/Managing-Stress-and-Sleep-with-CBD-in-Modern-Life" element={< CbdArticle10 />} />
+<Route path="/wellness/cbd/building-cbd-support-network" element={< CbdArticle11 />} />
+<Route path="/wellness/cbd/Science-behind-CBD" element={< CbdArticle12 />} />
+<Route path="/wellness/cbd/CBD-and-Nutrition:-Maximizing-Your-Wellness-Routine" element={< CbdArticle13 />} />
+<Route path="/wellness/cbd/understanding-cbd-quality" element={< CbdArticle14 />} />
+<Route path="/wellness/cbd/CBD-dosage-guideline" element={< CbdArticle15 />} />
+<Route path="/wellness/cbd/Legal-Landscape" element={< CbdArticle16 />} />
+
+
+<Route path="/wellness/Fitness/Welcome-to-Healthline-Fitness" element={< FitnessArticle1 />} />
+<Route path="/wellness/Fitness/top-10-exercises" element={< FitnessArticle2 />} />
+<Route path="/wellness/Fitness/The-Best-Core-Exercises-for-All-Fitness-Levels" element={< FitnessArticle3 />} />
+<Route path="/wellness/Fitness/A-Beginners-Guide-to-Weight-Training" element={< FitnessArticle4 />} />
+
+<Route path="/wellness/Fitness/Understanding-Workout-Types" element={< FitnessArticle5 />} />
+<Route path="/wellness/Fitness/Essential-Questions-to-Ask-Your-Personal-Trainer" element={< FitnessArticle6 />} />
+<Route path="/wellness/Fitness/Real-Fitness-Transformations" element={< FitnessArticle7 />} />
+<Route path="/wellness/Fitness/Managing-Stress-and-Recovery-in-Modern-Fitness" element={< FitnessArticle8 />} />
+<Route path="/wellness/Fitness/Building-Your-network" element={< FitnessArticle9 />} />
+<Route path="/wellness/Fitness/Fitness-and-Nutrition" element={< FitnessArticle10 />} />
+<Route path="/wellness/Fitness/Science-behind-exercise" element={< FitnessArticle11 />} />
+<Route path="/wellness/Fitness/Understanding-Fitness-Equipment:" element={< FitnessArticle12 />} />
+<Route path="/wellness/Fitness/Progressive-Overload" element={< FitnessArticle13 />} />
+<Route path="/wellness/Fitness/Injury-Prevention" element={< FitnessArticle14 />} />
 
 
 

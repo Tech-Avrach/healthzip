@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, X, Check, Mail, Shield, Award, Clock, Users } from 'lucide-react';
+import { ChevronDown,  X, Check, Mail, Shield, Award, Clock, Users } from 'lucide-react';
 
 const WellnessLandingPage = () => {
   const [email, setEmail] = useState('');

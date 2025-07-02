@@ -42,11 +42,11 @@ const Navbar = () => {
     ],
     connect: [
       { name: 'Breast Cancer', desc: 'Health updates', link: '/contact/breast-cancer' },
-      { name: 'Multiple Sclerosis', desc: 'Join discussions', link: '/connect/forum' },
-      { name: 'Depression', desc: 'Professional advice', link: '/connect/consultations' },
-      { name: 'Migraine', desc: 'Live sessions', link: '/connect/webinars' },
-      { name: 'Type 2 Diabetes', desc: 'Peer connections', link: '/connect/support-groups' },
-      { name: 'Psoriasis', desc: 'Monitor progress', link: '/connect/health-tracker' }
+      { name: 'Multiple Sclerosis', desc: 'Join discussions', link: 'https://www.bezzyms.com/?utm_source=healthline&utm_medium=hl-nav-bar-connections' },
+      { name: 'Depression', desc: 'Professional advice', link: 'https://www.bezzydepression.com/?utm_source=healthline&utm_medium=hl-nav-bar-connections' },
+      { name: 'Migraine', desc: 'Live sessions', link: 'https://www.bezzymigraine.com/?utm_source=healthline&utm_medium=hl-nav-bar-connections' },
+      { name: 'Type 2 Diabetes', desc: 'Peer connections', link: 'https://www.bezzyt2d.com/?utm_source=healthline&utm_medium=hl-nav-bar-connections' },
+      { name: 'Psoriasis', desc: 'Monitor progress', link: 'https://www.bezzypsoriasis.com/?utm_source=healthline&utm_medium=hl-nav-bar-connections' }
     ]
   };
 
