@@ -250,7 +250,7 @@ const Navbar = () => {
                 Subscribe
               </motion.a>
 
-              <motion.a
+              {/* <motion.a
                 href="/search"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -258,7 +258,7 @@ const Navbar = () => {
                 className="p-2 rounded-full bg-[#FEDED4] border border-gray-500"
               >
                 <Search size={20} className="text-gray-600" />
-              </motion.a>
+              </motion.a> */}
 
               <motion.button
                 whileHover={{ scale: 1.1 }}

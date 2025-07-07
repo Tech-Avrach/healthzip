@@ -115,7 +115,7 @@ const MentalHealthApp = () => {
   )
 
   const MainPage = () => (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden pt-20 md:pt-32">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-orange-50"></div>
       <FloatingElements />
@@ -207,7 +207,7 @@ const MentalHealthApp = () => {
     ]
 
     return (
-      <div className="min-h-screen relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden pt-20 md:pt-32">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-orange-50"></div>
         <FloatingElements />

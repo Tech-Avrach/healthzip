@@ -175,7 +175,7 @@ export default function SleepHealthNewsletterLayout() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden pt-20 md:pt-32">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50"></div>
 

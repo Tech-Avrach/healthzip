@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const Hero = () => {
+const Hero = ({ onStartReadingClick }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="w-full overflow-hidden">
       {/* Background Elements */}
@@ -99,6 +103,7 @@ Curated weekly to keep you informed, inspired, and one step ahead on your health
                   damping: 20 
                 }}
                 className="group relative bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg overflow-hidden shadow-lg flex-1 sm:flex-none"
+                onClick={onStartReadingClick}
               >
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600"
@@ -126,6 +131,8 @@ Curated weekly to keep you informed, inspired, and one step ahead on your health
                   stiffness: 300,
                   damping: 20 
                 }}
+
+                onClick={() => navigate('/contact-page')}
                 className="group border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg hover:shadow-lg transition-all duration-300 flex-1 sm:flex-none"
               >
                 <div className="flex items-center justify-center gap-2 sm:gap-3">

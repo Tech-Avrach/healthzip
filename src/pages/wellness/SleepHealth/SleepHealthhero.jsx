@@ -68,7 +68,7 @@ const HealthlineSleepHealthPage = () => {
 
       {/* Hero Section */}
       <section
-        className={`relative bg-gradient-to-r from-indigo-200 via-blue-200 to-purple-200 overflow-hidden transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`relative bg-gradient-to-r from-indigo-200 via-blue-200 to-purple-200 overflow-hidden transition-all duration-1000 pt-20 md:pt-32 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="flex flex-wrap items-center justify-between relative">

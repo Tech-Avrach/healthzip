@@ -9,7 +9,7 @@ const BreastCancerContact = () => {
   return (
     <>
     <div
-      className="min-h-screen relative overflow-hidden"
+      className="min-h-screen relative overflow-hidden pt-20 md:pt-32"
       style={{
         backgroundImage: "url(" + cancerImageDesktop + ")",
         backgroundSize: "cover",

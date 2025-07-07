@@ -54,7 +54,7 @@ const HealthlineRecipesPage = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-50 relative overflow-hidden pt-20 md:pt-32">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-32 h-32 bg-orange-100 rounded-full opacity-20 animate-pulse"></div>

@@ -214,7 +214,7 @@ const CBDLayout = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 ">
       {/* Floating Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full opacity-30 animate-pulse"></div>
@@ -223,7 +223,7 @@ const CBDLayout = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-purple-50 to-pink-100 py-12 sm:py-16 md:py-20">
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 via-purple-50 to-pink-100 py-12 sm:py-16 md:py-20 pt-32 md:pt-36">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-200/20 to-purple-200/20"></div>
         <div
           className={`relative max-w-6xl mx-auto px-4 sm:px-6 text-center transform transition-all duration-1000 ${

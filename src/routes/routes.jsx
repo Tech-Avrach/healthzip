@@ -211,6 +211,8 @@ import FitnessArticle11 from '@/pages/wellness/cbd/FitnessArticle/Blog11';
 import FitnessArticle12 from '@/pages/wellness/cbd/FitnessArticle/Blog12';
 import FitnessArticle13 from '@/pages/wellness/cbd/FitnessArticle/Blog13';
 import FitnessArticle14 from '@/pages/wellness/cbd/FitnessArticle/Blog14';
+import NewsFooter from '@/component/Footer';
+import ContactPage from '@/pages/Contact/ContactPage';
 
 
 
@@ -682,9 +684,15 @@ SleepLayeringGuide
 <Route path="/wellness/Fitness/Progressive-Overload" element={< FitnessArticle13 />} />
 <Route path="/wellness/Fitness/Injury-Prevention" element={< FitnessArticle14 />} />
 
+<Route path="/contact-page" element={<ContactPage />} />
+
+
+
 
 
     </Routes>
+
+    <NewsFooter />
     
     </>
   );

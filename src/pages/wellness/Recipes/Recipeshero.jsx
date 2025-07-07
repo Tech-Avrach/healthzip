@@ -60,7 +60,7 @@ const HealthlineRecipesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none ">
         <div className="absolute top-10 left-10 w-32 h-32 bg-orange-100 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute top-1/2 right-10 w-40 h-40 bg-green-100 rounded-full opacity-30 animate-bounce"></div>
         <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-yellow-100 rounded-full opacity-25 animate-pulse delay-1000"></div>
@@ -68,7 +68,7 @@ const HealthlineRecipesPage = () => {
 
       {/* Hero Section */}
       <section
-        className={`relative bg-gradient-to-r from-orange-200 via-yellow-200 to-green-200 overflow-hidden transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`relative bg-gradient-to-r from-orange-200 via-yellow-200 to-green-200 overflow-hidden transition-all duration-1000 pt-20 md:pt-32 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="flex flex-wrap items-center justify-between relative">
