@@ -8,7 +8,7 @@ const Hero = ({ onStartReadingClick }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden pt-20 ">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-orange-50 -z-10" />
       <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse -z-10" />

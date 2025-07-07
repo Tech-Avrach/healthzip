@@ -121,7 +121,8 @@ export default function CarnieWilsonDepressionArticle() {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg mb-4">
                   <h4 className="font-bold text-gray-800 mb-2">Key Milestones in Carnie's Mental Health Journey:</h4>
-                  <table className="w-full text-sm">
+                    <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
                     <thead>
                       <tr className="border-b border-gray-200">
                         <th className="text-left py-2">Year</th>
@@ -152,6 +153,7 @@ export default function CarnieWilsonDepressionArticle() {
                       </tr>
                     </tbody>
                   </table>
+                    </div>
                 </div>
                 <p className="text-gray-700 mb-6">
                   Carnie's willingness to discuss these challenges publicly has helped destigmatize mental health issues,
@@ -408,7 +410,8 @@ export default function CarnieWilsonDepressionArticle() {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg mb-6">
                   <h4 className="font-bold text-gray-800 mb-2">Effectiveness of Different Therapies for Carnie</h4>
-                  <table className="w-full text-sm">
+                    <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
                     <thead>
                       <tr className="border-b border-gray-200">
                         <th className="text-left py-2">Therapy Type</th>
@@ -444,6 +447,7 @@ export default function CarnieWilsonDepressionArticle() {
                       </tr>
                     </tbody>
                   </table>
+                    </div>
                 </div>
               </div>
 
