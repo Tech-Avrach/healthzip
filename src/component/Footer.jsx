@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, ChevronUp, TrendingUp, Newspaper, Users, Clock, Globe, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const NewsFooter = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -18,6 +19,12 @@ const NewsFooter = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  // scroll to top
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // })
 
   const handleNewsletterSubmit = () => {
     if (newsletterEmail.trim()) {
@@ -98,7 +105,7 @@ const NewsFooter = () => {
                 </p>
                 
                 {/* Social Media */}
-                <div className="space-y-3">
+                {/* <div className="space-y-3">
                   <h4 className="text-lg font-semibold text-gray-800">Follow Us</h4>
                   <div className="flex space-x-3">
                     {[
@@ -117,7 +124,7 @@ const NewsFooter = () => {
                       </a>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Contact Info - Compact */}
                 <div className="space-y-2">
@@ -155,14 +162,16 @@ const NewsFooter = () => {
                         value={newsletterEmail}
                         onChange={(e) => setNewsletterEmail(e.target.value)}
                         placeholder="Enter your email address"
-                        className="w-full px-4 py-3 rounded-lg border border-orange-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200/50 outline-none transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-lg border border-orange-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200/50 outline-none transition-all duration-300 mb-5"
                       />
+                      <Link to={'/contact-page'} >
                       <button
                         onClick={handleNewsletterSubmit}
                         className="w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                       >
                         Subscribe Now
                       </button>
+                      </Link>
                     </div>
                     
                     {/* Success popup */}
@@ -184,8 +193,12 @@ const NewsFooter = () => {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
               <p className="text-gray-600 text-center md:text-left text-sm">
                 ©️ 2025 US News Central. All rights reserved. | 
-                <a href="#" className="hover:text-orange-600 transition-colors duration-300 ml-1 font-medium">Privacy Policy</a> | 
-                <a href="#" className="hover:text-orange-600 transition-colors duration-300 ml-1 font-medium">Terms of Service</a>
+                <Link to="/privacy-policy">
+                <span className="hover:text-orange-600 transition-colors duration-300 ml-1 font-medium">Privacy Policy</span>
+                </Link> | 
+                <Link to="/terms-of-service">
+                <span className="hover:text-orange-600 transition-colors duration-300 ml-1 font-medium">Terms of Service</span>
+                </Link>
               </p>
               <div className="flex items-center space-x-2 text-gray-600 text-sm">
                 <span>Made with</span>

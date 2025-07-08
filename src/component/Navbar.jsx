@@ -183,15 +183,26 @@ const Navbar = () => {
               href="/"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-3"
             >
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">H</span>
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-red-400 rounded-xl flex items-center justify-center shadow-lg">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="white"/>
+                  </svg>
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-yellow-400 to-red-600 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
               </div>
-              <span className="text-xl font-bold">
-                <span className="text-purple-600">rticle</span>
-                <span className="text-orange-500">Ark</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold leading-none">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Health</span>
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent ml-1">Lin</span>
+                  <span className="text-pink-500">ee</span>
+                </span>
+                {/* <span className="text-xs text-gray-500 font-medium tracking-wide">WELLNESS PLATFORM</span> */}
+              </div>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -241,7 +252,7 @@ const Navbar = () => {
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
               <motion.a
-                href="/subscribe"
+                href="/contact-page"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -249,16 +260,6 @@ const Navbar = () => {
               >
                 Subscribe
               </motion.a>
-
-              {/* <motion.a
-                href="/search"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="p-2 rounded-full bg-[#FEDED4] border border-gray-500"
-              >
-                <Search size={20} className="text-gray-600" />
-              </motion.a> */}
 
               <motion.button
                 whileHover={{ scale: 1.1 }}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageCircle } from 'lucide-react';
 
@@ -17,6 +17,11 @@ const ContactPage = () => {
       [e.target.name]: e.target.value
     });
   };
+
+    useEffect(() => {
+      // Scroll to top when the component mounts
+      window.scrollTo(0, 0)
+    }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
