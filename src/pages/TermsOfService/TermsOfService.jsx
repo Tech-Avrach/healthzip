@@ -36,10 +36,10 @@ const TermsOfService = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-600">
-            By accessing and using ArticleArk's website, mobile applications, and related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.
+            By accessing and using Health Linee's website, mobile applications, and related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.
           </p>
           <p className="text-gray-600">
-            These Terms constitute a legally binding agreement between you and ArticleArk. Your use of our Services indicates your acceptance of these Terms and our Privacy Policy.
+            These Terms constitute a legally binding agreement between you and Health Linee. Your use of our Services indicates your acceptance of these Terms and our Privacy Policy.
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
             <div className="flex items-start space-x-3">
@@ -62,7 +62,7 @@ const TermsOfService = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-600">
-            ArticleArk is a health and wellness content curation platform that provides:
+            Health Linee is a health and wellness content curation platform that provides:
           </p>
           <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
             <li>Curated health trends and expert advice</li>
@@ -119,7 +119,7 @@ const TermsOfService = () => {
             <h4 className="font-semibold text-gray-800 mb-2 text-green-700">✓ Permitted Uses</h4>
             <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
               <li>Access and use content for personal, non-commercial purposes</li>
-              <li>Share content with proper attribution to ArticleArk</li>
+              <li>Share content with proper attribution to Health Linee</li>
               <li>Engage respectfully in community discussions</li>
               <li>Provide feedback and suggestions for improvement</li>
             </ul>
@@ -149,7 +149,7 @@ const TermsOfService = () => {
           <div>
             <h4 className="font-semibold text-gray-800 mb-2">Our Content</h4>
             <p className="text-gray-600 mb-2">
-              All content on ArticleArk, including text, graphics, logos, images, and software, is owned by ArticleArk or licensed to us. This content is protected by copyright, trademark, and other intellectual property laws.
+              All content on Health Linee, including text, graphics, logos, images, and software, is owned by Health Linee or licensed to us. This content is protected by copyright, trademark, and other intellectual property laws.
             </p>
             <p className="text-gray-600">
               We grant you a limited, non-exclusive, non-transferable license to access and use our content for personal, non-commercial purposes.
@@ -180,7 +180,7 @@ const TermsOfService = () => {
               <div>
                 <p className="text-red-800 font-medium">Important Medical Disclaimer</p>
                 <p className="text-red-700 text-sm mt-1">
-                  The information provided on ArticleArk is for educational and informational purposes only and should not be considered as medical advice.
+                  The information provided on Health Linee is for educational and informational purposes only and should not be considered as medical advice.
                 </p>
               </div>
             </div>
@@ -257,7 +257,7 @@ const TermsOfService = () => {
           <div>
             <h4 className="font-semibold text-gray-800 mb-2">Limitation of Liability</h4>
             <p className="text-gray-600">
-              To the maximum extent permitted by law, ArticleArk shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities.
+              To the maximum extent permitted by law, Health Linee shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities.
             </p>
           </div>
           
@@ -277,7 +277,7 @@ const TermsOfService = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-600">
-            Our Services may contain links to third-party websites, applications, or services that are not owned or controlled by ArticleArk.
+            Our Services may contain links to third-party websites, applications, or services that are not owned or controlled by Health Linee.
           </p>
           <div className="space-y-3">
             <div>
@@ -295,7 +295,7 @@ const TermsOfService = () => {
             <div>
               <h4 className="font-semibold text-gray-800 mb-2">No Endorsement</h4>
               <p className="text-gray-600">
-                The inclusion of third-party links or services does not constitute an endorsement by ArticleArk of such third parties or their content.
+                The inclusion of third-party links or services does not constitute an endorsement by Health Linee of such third parties or their content.
               </p>
             </div>
           </div>
@@ -383,7 +383,7 @@ const TermsOfService = () => {
           <div>
             <h4 className="font-semibold text-gray-800 mb-2">Entire Agreement</h4>
             <p className="text-gray-600">
-              These Terms, together with our Privacy Policy, constitute the entire agreement between you and ArticleArk regarding our Services.
+              These Terms, together with our Privacy Policy, constitute the entire agreement between you and Health Linee regarding our Services.
             </p>
           </div>
           
@@ -436,7 +436,7 @@ const TermsOfService = () => {
             Terms of Service
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            These terms govern your use of ArticleArk's health content curation services. Please read them carefully before using our platform.
+            These terms govern your use of Health Linee's health content curation services. Please read them carefully before using our platform.
           </p>
           <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-gray-200 inline-block">
             <p className="text-sm text-gray-600">
@@ -458,7 +458,7 @@ const TermsOfService = () => {
           <motion.div variants={fadeInUp} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement Overview</h2>
             <p className="text-gray-600 mb-4">
-              Welcome to ArticleArk! These Terms of Service ("Terms") govern your access to and use of our health content curation platform, website, mobile applications, and related services. By using our Services, you enter into a binding legal agreement with ArticleArk.
+              Welcome to Health Linee! These Terms of Service ("Terms") govern your access to and use of our health content curation platform, website, mobile applications, and related services. By using our Services, you enter into a binding legal agreement with Health Linee.
             </p>
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg p-4 border border-purple-200">
               <p className="text-purple-800 font-medium mb-2">Key Points:</p>
@@ -550,7 +550,7 @@ const TermsOfService = () => {
                   <div>
                     <p className="font-semibold text-gray-900">Legal Address</p>
                     <p className="text-gray-600">
-                      ArticleArk Legal Department<br />
+                      Health Linee Legal Department<br />
                       123 Health Street<br />
                       New York, NY 10001<br />
                       United States

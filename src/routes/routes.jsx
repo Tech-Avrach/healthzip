@@ -123,7 +123,7 @@ import MigraineEarlyWarningGuide from '@/pages/Migraine/Blog/Blog15';
 import PediatricMigraineGuide from '@/pages/Migraine/Blog/Blog17';
 import MigraineManagementTeamGuide from '@/pages/Migraine/Blog/Blog18';
 import HormonalMigrainesGuide from '@/pages/Migraine/Blog/Blog16';
-import RecipeTypesGuide from '@/pages/wellness/Recipes/Blog/Blog5';
+// import RecipeTypesGuide from '@/pages/wellness/Recipes/Blog/Blog5';
 import NutritionistQuestionsGuide from '@/pages/wellness/Recipes/Blog/Blog6';
 import KitchenTransformationGuide from '@/pages/wellness/Recipes/Blog/Blog7';
 import MealPrepGuide from '@/pages/wellness/Recipes/Blog/Blog8';
@@ -530,7 +530,7 @@ ChronicMigraineGuide
 
 <Route path="/wellness/recipes/blogs/meal-prep-guide-beginners" element={<MealPrepGuideBeginners />} />
 
-<Route path="/wellness/recipes/blogs/recipe-types" element={<RecipeTypesGuide />} />
+{/* <Route path="/wellness/recipes/blogs/recipe-types" element={<RecipeTypesGuide />} /> */}
 
 <Route path="/wellness/recipes/blogs/nutritionist-questions-guide" element={<NutritionistQuestionsGuide />} />
 

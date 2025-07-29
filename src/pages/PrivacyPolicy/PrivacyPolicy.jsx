@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
         <div className="space-y-4">
           <p className="text-gray-600">Our platform may contain links to third-party websites, services, or applications. We are not responsible for the privacy practices of these external sites.</p>
           <p className="text-gray-600">We encourage you to review the privacy policies of any third-party services you access through our platform.</p>
-          <p className="text-gray-600">This Privacy Policy applies only to information collected by ArticleArk and does not cover information collected by third parties.</p>
+          <p className="text-gray-600">This Privacy Policy applies only to information collected by Health Linee and does not cover information collected by third parties.</p>
         </div>
       )
     },
@@ -229,7 +229,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your information when you use ArticleArk.
+            Your privacy is important to us. This policy explains how we collect, use, and protect your information when you use Health Linee.
           </p>
           <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-gray-200 inline-block">
             <p className="text-sm text-gray-600">
@@ -251,7 +251,7 @@ const PrivacyPolicy = () => {
           <motion.div variants={fadeInUp} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
             <p className="text-gray-600 mb-4">
-              ArticleArk ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our health content curation services.
+              Health Linee ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our health content curation services.
             </p>
             <p className="text-gray-600">
               By using our services, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with our policies and practices, please do not use our services.

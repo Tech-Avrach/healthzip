@@ -68,7 +68,7 @@ const ContactPage = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">A</span>
               </div>
-              <span className="text-xl font-bold text-gray-800">ArticleArk</span>
+              <span className="text-xl font-bold text-gray-800">Health Linee</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">Health Conditions</a>

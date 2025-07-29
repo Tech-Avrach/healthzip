@@ -20,26 +20,26 @@ const FAQAccordion = () => {
     {
       id: 1,
       icon: HelpCircle,
-      question: "What is ArticleArk",
-      answer: "ArticleArk is a leading digital health publisher offering expert-reviewed, evidence-based content on a wide range of health topics.."
+      question: "What is Health Linee",
+      answer: "Health Linee is a leading digital health publisher offering expert-reviewed, evidence-based content on a wide range of health topics.."
     },
     {
       id: 2,
       icon: Shield,
       question: "Is my data secure and private?",
-      answer: "ArticleArk is committed to protecting your information and will never share or disclose your personal information with any third party."
+      answer: "Health Linee is committed to protecting your information and will never share or disclose your personal information with any third party."
     },
     {
       id: 3,
       icon: CreditCard,
-      question: "Is ArticleArk a medical provider?",
+      question: "Is Health Linee a medical provider?",
       answer: "No, Healthline is a digital publisher and does not offer personal health or medical advice. "
     },
     {
       id: 4,
       icon: Truck,
-      question: "How does ArticleArk ensure content accuracy?",
-      answer: "ArticleArk's content is created, fact-checked, and reviewed by qualified writers, editors, clinicians, and other contributors to ensure accuracy and trustworthiness"
+      question: "How does Health Linee ensure content accuracy?",
+      answer: "Health Linee's content is created, fact-checked, and reviewed by qualified writers, editors, clinicians, and other contributors to ensure accuracy and trustworthiness"
     },
     
     // {

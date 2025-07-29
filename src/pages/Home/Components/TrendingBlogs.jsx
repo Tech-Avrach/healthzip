@@ -316,7 +316,7 @@ const TrendingBlogs = () => {
                     Product Designer
                   </p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    Hey, I'm a New York based product designer. ArticleArk is where I
+                    Hey, I'm a New York based product designer. Health Linee is where I
                     share design, tech, technology, and personal projects. Let's
                     explore world together.
                   </p>
