@@ -1,17 +1,179 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Search, Menu, X } from 'lucide-react';
+import { ChevronDown, Search, Menu, X, Mail, User, MessageCircle } from 'lucide-react';
+
+const ContactPopup = ({ isOpen, onClose }) => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = () => {
+    console.log('Form submitted:', formData);
+    // Handle form submission here
+    onClose();
+    setFormData({ fullName: '', email: '', message: '' });
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[9999]"
+          onClick={onClose}
+        >
+          {/* Popup Container */}
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0, y: 50 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.7, opacity: 0, y: 50 }}
+            transition={{ 
+              type: "spring", 
+              duration: 0.5,
+              bounce: 0.3 
+            }}
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <motion.button
+              onClick={onClose}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <X size={20} />
+            </motion.button>
+
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="text-white" size={24} />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                Send us a <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Message</span>
+              </h2>
+              <p className="text-gray-600 text-sm">
+                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              </p>
+            </div>
+
+            {/* Form */}
+            <div className="space-y-6">
+              {/* Full Name Field */}
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name
+                </label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    placeholder="Enter your full name"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all duration-200"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Email Field */}
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Enter your email"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all duration-200"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Message Field */}
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <div className="relative">
+                  <MessageCircle className="absolute left-3 top-4 text-gray-400" size={18} />
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell us more about your inquiry..."
+                    rows={4}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all duration-200 resize-none"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <motion.button
+                onClick={handleSubmit}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Send Message
+              </motion.button>
+            </div>
+
+            {/* Footer */}
+            <div className="text-center mt-6">
+              <p className="text-xs text-gray-500">
+                We'll get back to you within 24 hours
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
   const handleDropdownToggle = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const openContactPopup = () => {
+    setIsContactPopupOpen(true);
+    // Close mobile menu if open
+    setIsMenuOpen(false);
+  };
+
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
   };
 
   // Mega menu data with links
@@ -201,7 +363,6 @@ const Navbar = () => {
                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent ml-1">Lin</span>
                   <span className="text-pink-500">ee</span>
                 </span>
-                {/* <span className="text-xs text-gray-500 font-medium tracking-wide">WELLNESS PLATFORM</span> */}
               </div>
             </motion.a>
 
@@ -251,15 +412,15 @@ const Navbar = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
-              <motion.a
-                href="/contact-page"
+              <motion.button
+                onClick={openContactPopup}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="hidden lg:block bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-md"
               >
                 Subscribe
-              </motion.a>
+              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -337,8 +498,8 @@ const Navbar = () => {
                     </div>
                   ))}
                   
-                  <motion.a
-                    href="/subscribe"
+                  <motion.button
+                    onClick={openContactPopup}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5, duration: 0.3 }}
@@ -347,13 +508,16 @@ const Navbar = () => {
                     className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-md w-fit mt-4"
                   >
                     Subscribe
-                  </motion.a>
+                  </motion.button>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.nav>
       </motion.div>
+
+      {/* Contact Popup */}
+      <ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
 
       {/* Overlay for mobile menu */}
       <AnimatePresence>

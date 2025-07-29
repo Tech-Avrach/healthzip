@@ -2,16 +2,25 @@
 
 import { useState, useEffect } from "react"
 import { Heart, Share2, BookOpen, Clock, X } from "lucide-react"
+import ContactPopup from "@/component/ContactPopup"
 
 const HealthlineRecipesPage = () => {
   const [selectedArticle, setSelectedArticle] = useState(null)
   const [isVisible, setIsVisible] = useState(false)
   const [showSharePopup, setShowSharePopup] = useState(false)
   const [likedArticles, setLikedArticles] = useState(new Set())
+    const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+  
 
   useEffect(() => {
-    setIsVisible(true)
+    // setIsVisible(true)
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+    return () => clearTimeout(timer);
   }, [])
+
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
 
   const toggleLike = (articleId) => {
     const newLiked = new Set(likedArticles)
@@ -55,6 +64,10 @@ const HealthlineRecipesPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden pt-20 md:pt-32">
+
+
+        
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-32 h-32 bg-orange-100 rounded-full opacity-20 animate-pulse"></div>
@@ -328,7 +341,10 @@ const HealthlineRecipesPage = () => {
               </button>
             </div>
           </div>
+          
         </div>
+
+
       )}
 
       {/* Custom Styles */}
@@ -362,6 +378,7 @@ const HealthlineRecipesPage = () => {
           animation: scale-in 0.3s ease-out;
         }
       `}</style>
+
     </div>
   )
 }

@@ -2,16 +2,26 @@
 
 import { useState, useEffect } from "react"
 import { Heart, Share2, BookOpen, Clock, X } from "lucide-react"
+import ContactPopup from "@/component/ContactPopup"
 
 const HealthlineSexualHealthPage = () => {
   const [selectedArticle, setSelectedArticle] = useState(null)
   const [isVisible, setIsVisible] = useState(false)
   const [showSharePopup, setShowSharePopup] = useState(false)
   const [likedArticles, setLikedArticles] = useState(new Set())
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+
+    setIsVisible(true);
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+    return () => clearTimeout(timer);
+
+  }, []);
+
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
 
   const toggleLike = (articleId) => {
     const newLiked = new Set(likedArticles)
@@ -363,6 +373,8 @@ const HealthlineSexualHealthPage = () => {
           animation: scale-in 0.3s ease-out;
         }
       `}</style>
+<ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
+
     </div>
   )
 }

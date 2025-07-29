@@ -1,12 +1,15 @@
 "use client"
 
+import ContactPopup from "@/component/ContactPopup";
 import { useState, useEffect } from "react"
 
 const EyeHealthApp = () => {
-  const [currentView, setCurrentView] = useState("main")
-  const [showWelcomeModal, setShowWelcomeModal] = useState(false)
-  const [showResourceModal, setShowResourceModal] = useState(null)
-  const [floatingElements, setFloatingElements] = useState([])
+  const [currentView, setCurrentView] = useState('main');
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+  const [showResourceModal, setShowResourceModal] = useState(null);
+  const [floatingElements, setFloatingElements] = useState([]);
+    const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+  
 
   // Generate floating background elements
   useEffect(() => {
@@ -16,14 +19,18 @@ const EyeHealthApp = () => {
       x: Math.random() * 100,
       y: Math.random() * 100,
       duration: Math.random() * 20 + 15,
-      delay: Math.random() * 5,
-    }))
-    setFloatingElements(elements)
+      delay: Math.random() * 5
+    }));
+    setFloatingElements(elements);
+    
+    // Open contact popup in 1 seconds on initial load
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-    // Show welcome modal after 1 second
-    const timer = setTimeout(() => setShowWelcomeModal(true), 1000)
-    return () => clearTimeout(timer)
-  }, [])
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
 
   const WelcomeModal = () => (
     <div
@@ -345,7 +352,7 @@ const EyeHealthApp = () => {
 
       {currentView === "main" ? <MainPage /> : <AssessmentPage />}
 
-      <WelcomeModal />
+      <ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
       <ResourceModal
         resource={showResourceModal}
         isOpen={!!showResourceModal}

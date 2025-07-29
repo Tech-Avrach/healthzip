@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import ContactPopup from '@/component/ContactPopup';
 
 const Hero = ({ onStartReadingClick }) => {
+
+    const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+  
+  
+    useEffect(() => {
+  
+      // setIsVisible(true);
+  
+      const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+      return () => clearTimeout(timer);
+  
+  
+    }, []);
+  
+    const closeContactPopup = () => {
+      setIsContactPopupOpen(false);
+    };
 
   const navigate = useNavigate();
 
@@ -311,6 +329,8 @@ Curated weekly to keep you informed, inspired, and one step ahead on your health
           </motion.div>
         </motion.div>
       </div>
+<ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import ContactPopup from '@/component/ContactPopup';
 import React, { useState, useEffect } from 'react';
 
 const BreastCancerApp = () => {
@@ -5,6 +6,7 @@ const BreastCancerApp = () => {
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
   const [showResourceModal, setShowResourceModal] = useState(null);
   const [floatingElements, setFloatingElements] = useState([]);
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
 
   // Generate floating background elements
   useEffect(() => {
@@ -18,32 +20,40 @@ const BreastCancerApp = () => {
     }));
     setFloatingElements(elements);
     
-    // Show welcome modal after 1 second
-    const timer = setTimeout(() => setShowWelcomeModal(true), 1000);
+    // Open contact popup in 1 seconds on initial load
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 2000);
     return () => clearTimeout(timer);
+
+
+    // setIsContactPopupOpen(true);
   }, []);
 
-  const WelcomeModal = () => (
-    <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-500 ${showWelcomeModal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-      <div className={`bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform transition-all duration-700 ${showWelcomeModal ? 'scale-100 translate-y-0' : 'scale-75 translate-y-8'}`}>
-        <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-            <span className="text-2xl text-white">💖</span>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-800 mb-3">Welcome to Your Support Journey</h3>
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            We're here to support you every step of the way. Find resources, guidance, and hope for your breast cancer journey.
-          </p>
-          <button
-            onClick={() => setShowWelcomeModal(false)}
-            className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
-          >
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
+
+
+  // const WelcomeModal = () => (
+  //   <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-500 ${showWelcomeModal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+  //     <div className={`bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform transition-all duration-700 ${showWelcomeModal ? 'scale-100 translate-y-0' : 'scale-75 translate-y-8'}`}>
+  //       <div className="text-center">
+  //         <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+  //           <span className="text-2xl text-white">💖</span>
+  //         </div>
+  //         <h3 className="text-2xl font-bold text-gray-800 mb-3">Welcome to Your Support Journey</h3>
+  //         <p className="text-gray-600 mb-6 leading-relaxed">
+  //           We're here to support you every step of the way. Find resources, guidance, and hope for your breast cancer journey.
+  //         </p>
+  //         <button
+  //           onClick={() => setShowWelcomeModal(false)}
+  //           className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+  //         >
+  //           Get Started
+  //         </button>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 
   const ResourceModal = ({ resource, isOpen, onClose }) => (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
@@ -310,7 +320,7 @@ const BreastCancerApp = () => {
       
       {currentView === 'main' ? <MainPage /> : <NewlyDiagnosedPage />}
       
-      <WelcomeModal />
+      <ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
       <ResourceModal 
         resource={showResourceModal} 
         isOpen={!!showResourceModal} 

@@ -10,16 +10,27 @@ import {
   BookOpen,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactPopup from "@/component/ContactPopup";
 
 const CBDLayout = () => {
   const [selectedPopup, setSelectedPopup] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredArticle, setHoveredArticle] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+
 
   useEffect(() => {
+
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+    return () => clearTimeout(timer);
+
     setIsVisible(true);
   }, []);
+
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
 
   const topCategories = [
     {
@@ -495,6 +506,9 @@ const CBDLayout = () => {
           overflow: hidden;
         }
       `}</style>
+
+<ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
+
     </div>
   );
 };

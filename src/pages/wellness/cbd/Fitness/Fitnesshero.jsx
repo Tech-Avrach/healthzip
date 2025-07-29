@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, BookOpen, Clock, X } from 'lucide-react';
+import ContactPopup from '@/component/ContactPopup';
 
 const HealthlineFitnessPage = () => {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const [likedArticles, setLikedArticles] = useState(new Set());
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+
 
   useEffect(() => {
+
     setIsVisible(true);
+
+    const timer = setTimeout(() => setIsContactPopupOpen(true), 1000);
+    return () => clearTimeout(timer);
+
+
   }, []);
+
+  const closeContactPopup = () => {
+    setIsContactPopupOpen(false);
+  };
+
 
   const toggleLike = (articleId) => {
     const newLiked = new Set(likedArticles);
@@ -245,6 +259,8 @@ const HealthlineFitnessPage = () => {
           animation: scale-in 0.3s ease-out;
         }
       `}</style>
+<ContactPopup isOpen={isContactPopupOpen} onClose={closeContactPopup} />
+
     </div>
   );
 };
