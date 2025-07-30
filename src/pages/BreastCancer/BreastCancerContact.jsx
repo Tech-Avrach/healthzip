@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import cancerImageDesktop from "../../assets/cancerImageDesktop.png"
 import BezzyStats from "./BezzyStats";
 import BezzySignUpForm from "./BezzySignUpForm";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const BreastCancerContact = () => {
   return (
@@ -108,7 +108,7 @@ const BreastCancerContact = () => {
     </div>
     <BezzyStats/>
     <BezzySignUpForm/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 };
