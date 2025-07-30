@@ -8,7 +8,7 @@ const BreastCancer = () => {
     <div>
       <BreastCancerApp />
       <BreastCancerResources />
-      {/* <CompleteHealthNewsletterLayout /> */}
+      <CompleteHealthNewsletterLayout />
     </div>
   )
 }
