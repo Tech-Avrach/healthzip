@@ -22,7 +22,7 @@ function Home() {
       <div ref={trendingRef}>
         <TrendingBlogs />
       </div>
-      {/* <LatestBlog /> */}
+      <LatestBlog />
       <FAQAccordion />
     </div>
   )
