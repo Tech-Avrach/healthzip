@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { X, Mail, User, MessageCircle } from 'lucide-react';
 
-// ContactPopup Component
-const ContactPopup = ({ isOpen, onClose }) => {
+const ContactPopup = ({ isOpen, onClose, onSuccess }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     message: ''
   });
+
+  useEffect(() => {
+    const savedData = localStorage.getItem('contactFormData');
+    if (savedData) {
+      const { timestamp } = JSON.parse(savedData);
+      const twoHours = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+      if (Date.now() - timestamp < twoHours) {
+        onClose();
+      } else {
+        localStorage.removeItem('contactFormData');
+      }
+    }
+  }, [isOpen, onClose]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,9 +30,16 @@ const ContactPopup = ({ isOpen, onClose }) => {
   };
 
   const handleSubmit = () => {
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    onClose();
+    const dataToStore = {
+      formData,
+      timestamp: Date.now()
+    };
+    localStorage.setItem('contactFormData', JSON.stringify(dataToStore));
+    if (onSuccess) {
+      onSuccess();
+    } else {
+      onClose();
+    }
     setFormData({ fullName: '', email: '', message: '' });
   };
 
